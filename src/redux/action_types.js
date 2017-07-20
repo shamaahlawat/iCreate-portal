@@ -1,0 +1,12 @@
+const actionTypes = {
+	//page
+	SYST_LANG_SET: "SYST_LANG_SET",
+	DEVICE_DATA_LOADED: "DEVICE_DATA_LOADED",
+	PAGE_CHANGED: "PAGE_CHANGED",
+
+	//count
+	INC_COUNT: "INCREMENT_COUNT",
+	DEC_COUNT: "DECREMENT_COUNT"
+};
+
+export default actionTypes;
