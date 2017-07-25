@@ -12,8 +12,8 @@ export default class RootContainer extends Component {
 	render() {
 		return (
 			<Flexbox flexDirection="column" minHeight="100vh" className="RootContainer">
-				<AppHeader />
-				<Flexbox className="MainContentContainer" flex="1">
+				 <AppHeader /> 
+				<Flexbox className="MainContentContainer noPadding" flex="1">
 					<PageTransition>{this.props.children || <MainPage />}</PageTransition>
 				</Flexbox>
 			</Flexbox>
