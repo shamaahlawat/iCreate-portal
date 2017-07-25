@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Flexbox from 'flexbox-react';
 import { ButtonToolbar, Button } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
 import NavLink from './components/_navlinks.js';
 // import './css/page1.less';
@@ -11,31 +12,44 @@ class MainHome extends Component {
     render() {
         return (
             <div className="fluid-container">
-                <nav className="navbar ">
-                    <div className="container-fluid nav-align">
-                        <div className="navbar-header">
-                            <div className="navbar-header">
-                                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                                    <span className="icon-bar"></span>
-                                    <span className="icon-bar"></span>
-                                    <span className="icon-bar"></span>
-                                </button>
-                            </div>
-                            <a className="navbar-brand"> <img src="../assets/images/logo.png" alt=" not found "></img> </a>
-                        </div>
-                        <ul className="nav navbar-nav navbar-right  ">
-                            <li className="background"><a href="#">Home</a></li>
-                            <li><a href="#">Sign In</a></li>
-                            <li><a href="#">Sign Up</a></li>
-                        </ul>
-                    </div>
-                </nav>
-
-                <div className="col-md-12 section startupPortal">
+                <Flexbox flexDirection="row" minWidth="100vw" className="AppHeader simple from-right transition-item">
+                    <Navbar class="minHeight" collapseOnSelect>
+                        <Navbar.Header >
+                            <Navbar.Brand>
+                                <NavLink className="logo" to="/">
+                                    <img src="../assets/images/logo.png " className="img-responsive margin-top-bottom" />
+                                </NavLink>
+                            </Navbar.Brand>
+                            <Navbar.Toggle />
+                        </Navbar.Header>
+                        <Navbar.Collapse>
+                            <Nav pullRight>
+                                <NavLink className="home" to="/">
+                                    Home
+                                </NavLink>
+                                <NavLink className="home" to="/">
+                                    Sign In
+                                </NavLink>
+                                <NavLink className="home" to="/">
+                                    Sign Up
+                                </NavLink>
+                                {/* <NavDropdown eventKey={1} title="Home" id="dropdown1">
+                                    <NavLink withLi to="/page1/a">A</NavLink>
+                                    <NavLink withLi to="/page1/b">B</NavLink>
+                                </NavDropdown>
+                                <NavDropdown eventKey={2} title="Sign In " id="dropdown2">
+                                    <NavLink withLi to="/page2/a">A</NavLink>
+                                    <NavLink withLi to="/page2/b">B</NavLink>
+                                </NavDropdown> */}
+                            </Nav>
+                        </Navbar.Collapse>
+                    </Navbar>
+                </Flexbox>
+                <div className="col-xs-12 col-md-12 section startupPortal">
                     <div className="col-xs-12 col-md-10 col-md-offset-1">
                         <div className=" col-xs-12 col-md-12 portal">
                             <h1> Startup Ecosystem Portal </h1>
-                            <p col-md-4 >{"This is a paragraph, lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  industry's standard dummy text ever since the 1500s. "}</p>
+                            <p  >{"This is a paragraph, lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  industry's standard dummy text ever since the 1500s. "}</p>
                         </div>
                         <div className="col-xs-12 col-md-12 chooseStartup">
                             <div className="col-md-3 col-md-offset-1 decription">
@@ -82,12 +96,12 @@ class MainHome extends Component {
                     </div>
                 </div>
 
-                <div className="col-md-12 section featureDetailContainer">
+                <div className="col-xs-12 col-md-12 section featureDetailContainer">
                     <div className="col-xs-12 col-md-10 col-md-offset-1">
                         <div className="col-xs-12 col-md-12 textDetailsContainer">
                             All the features details
                 </div>
-                        <div className="col-xs-12 col-md-12 jumbotron imageDetailsContainer">
+                        <div className="col-xs-12 col-md-12 imageDetailsContainer">
 
                             <div className="col-xs-12 col-md-10 col-md-offset-1 columnAlign">
                                 <div className="  image1">
@@ -129,7 +143,7 @@ class MainHome extends Component {
                     </div>
                 </div>
 
-                <div className="col-md-12 section aboutIcreate">
+                <div className="col-xs-12 col-md-12 section aboutIcreate">
 
                     <div className="col-xs-12 col-md-10 col-md-offset-1 mainSubIcreate">
                         <div className="col-xs-12 col-md-4 subAboutIcreate">
@@ -158,20 +172,20 @@ class MainHome extends Component {
                 </div>
 
                 <div className="col-md-12 section">
-                    <div className="col-xs-12 col-md-8 col-md-offset-2">
+                    <div className="col-xs-12 col-md-6 col-md-offset-3">
                         <ul>
-                            <li><img src="../assets/images/sstar.png" alt=" not defined "></img>Basecamp</li>
-                            <li><img src="../assets/images/sstar.png" alt=" not defined "></img>grubHub</li>
-                            <li><img src="../assets/images/sstar.png" alt="not defined "></img>Trello</li>
-                            <li><img src="../assets/images/sstar.png" alt=" not defined "></img>buffer</li>
-                            <li><img src="../assets/images/sstar.png" alt=" not defined "></img>pocket</li>
+                            <li ><img src="../assets/images/sstar.png" alt=" not defined "></img>Basecamp</li>
+                            <li ><img src="../assets/images/sstar.png" alt=" not defined "></img>grubHub</li>
+                            <li ><img src="../assets/images/sstar.png" alt="not defined "></img>Trello</li>
+                            <li ><img src="../assets/images/sstar.png" alt=" not defined "></img>buffer</li>
+                            <li ><img src="../assets/images/sstar.png" alt=" not defined "></img>pocket</li>
                         </ul>
                     </div>
                 </div>
 
-                <div className="col-md-12 section deliverHappiness">
+                <div className="col-xs-12 col-md-12 section deliverHappiness">
                     <div className="col-xs-12 col-md-10 col-md-offset-1">
-                        <div className="col-md-12 happinesstext">
+                        <div className="col-xs-12 col-md-12 happinesstext">
                             <h2> Great Products Deliver Happiness to Users</h2>
                         </div>
                         <div className="col-xs-12 col-md-12 " style={{ textAlign: "center" }}>
@@ -187,3 +201,7 @@ class MainHome extends Component {
 }
 
 export default MainHome;
+
+
+// WEBPACK FOOTER //
+// src/pages/main_home.js
