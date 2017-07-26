@@ -3,8 +3,8 @@ import Flexbox from 'flexbox-react';
 import './css/footer.less';
 
 class FooterContainer extends Component {
-	render(){
-		return(
+	render() {
+		return (
 			<Flexbox className="FooterContainer noLRPadding">
 				<div className="col-md-12 col-sm-12 col-xs-12 marginTop-25 footer-bg">
 
