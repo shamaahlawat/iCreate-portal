@@ -6,14 +6,15 @@ import Page1b from '../pages/page1b';
 import Page2 from '../pages/page2';
 import Page2a from '../pages/page2a';
 import Page2b from '../pages/page2b';
+import SearchContainer from '../pages/search_container';
 
 const AppRoutes = {
 	path: '/',
 	component: RootContainer,
 	childRoutes: [
 		{
-			path: 'home',
-			component: MainPage
+			path: 'search',
+			component: SearchContainer
 		},
 		{
 			path: 'page1',

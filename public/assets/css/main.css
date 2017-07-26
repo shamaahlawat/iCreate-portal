@@ -29,6 +29,40 @@ body {
 }
 
 /*common*/
+.tb-padding-5 {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+}
+
+.tb-padding-20{
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;
+}
+
+.top-margin-12{
+	margin-top: 12px;
+}
+	
+.top-padding-10{
+	padding-top: 10px;
+}
+
+.top-margin-25{
+	margin-top: 25px;
+}
+
+.bottom-margin-20{
+	margin-bottom: 20px;
+}
+
+.bottom-margin-10{
+	margin-bottom: 10px;
+}
+
+.left-margin-40{
+	margin-left: 40px;
+}
+
 
 .withPadding {
 	padding-left: 15px;
@@ -38,6 +72,12 @@ body {
 .withoutPadding {
 	padding: 0 !important;
 }
+
+.noLRPadding {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
 
 .noPadding {
 	padding-left: 0 !important;
@@ -52,8 +92,16 @@ body {
 	padding-right: 0 !important;
 }
 
+.paddingTop-10{
+	padding-top: 10px;
+}
+
 .noMargin {
 	margin: 0 !important;
+}
+
+.noMarginLeft{
+	margin-left: 0 !important;
 }
 
 .noMarginTop {
@@ -62,6 +110,21 @@ body {
 
 .noMarginBottom {
 	margin-bottom: 0 !important;
+}
+
+.marginBottom-2 {
+    margin-bottom:2px; 
+}
+.marginTop-10 {
+	margin-top: 10px;
+}
+
+.marginTop-12{
+	margin-top: 12px !important;
+}
+
+.marginTop-25 {
+	margin-top: 25px;
 }
 
 .wordBreak {
@@ -95,6 +158,10 @@ body {
 .fullWidth {
 	width: 100%;
 }
+
+hr {
+		border-color: #979797;
+	}
 
 .disabled {
 	cursor: not-allowed !important;
@@ -147,3 +214,6 @@ body {
 		display: block !important;
 	}
 }
+
+
+
