@@ -7,10 +7,11 @@ import Page2 from '../pages/page2';
 import Page2a from '../pages/page2a';
 import Page2b from '../pages/page2b';
 import SearchContainer from '../pages/search_container';
+import MainHome from '../pages/main_home';
 
 const AppRoutes = {
 	path: '/',
-	component: RootContainer,
+	component: MainHome,
 	childRoutes: [
 		{
 			path: 'search',

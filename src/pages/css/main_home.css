@@ -1,0 +1,253 @@
+.minHeight {
+  min-height: 88px;
+}
+.navSize {
+  width: 100px !important;
+  height: 100px !important;
+}
+.navPadding {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+.tb-padding-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.home {
+  color: #185a9d;
+  margin: 50px;
+  line-height: 7;
+}
+.noPadding {
+  padding: 0px;
+}
+.logo {
+  margin-top: 20px;
+  margin-left: 30px;
+}
+.background {
+  color: #185a9d !important;
+  border: none !important;
+  border-color: white;
+}
+.navbar {
+  background-color: white !important;
+}
+.sections {
+  height: auto;
+  background-color: white;
+}
+.nav-align {
+  padding-right: 210px !important;
+  padding-left: 210px !important;
+}
+.navbar-brand {
+  float: left;
+  height: 0px !important;
+  padding: 0 !important;
+  line-height: 0px !important;
+}
+.startupPortal {
+  height: auto;
+  background: linear-gradient(to right, #43cea2, #185a9d);
+}
+.startupPortal .portal {
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.chooseStartup {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  flex: 1;
+}
+.textDefine {
+  margin: 160px;
+}
+.columnAlign h5 {
+  text-align: center;
+}
+.columnAlign p {
+  color: grey;
+}
+.chooseStartup img {
+  margin: 5px;
+}
+.chooseStartup2 {
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+.featureDetailContainer {
+  padding-bottom: 30px;
+  height: auto;
+}
+.featureDetailContainer .textDetailsContainer {
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  line-height: 100px;
+  margin: auto;
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 15px;
+}
+.featureDetailContainer .imageDetailsContainer {
+  background-color: white;
+  margin: auto;
+}
+.columnAlign .text {
+  padding-bottom: 17px;
+  padding-top: 17px;
+}
+.featureDetailContainer .imageDetailsContainer .defineText {
+  color: #9ba5af;
+  margin-left: 120px;
+}
+.featureDetailContainer .imageDetailsContainer {
+  display: flex;
+  flex-direction: row;
+}
+.featureDetailContainer .imageDetailsContainer .columnAlign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.columnAlign .text {
+  text-align: centre;
+}
+.columnAlign .image1 {
+  width: 90px;
+  height: 90px;
+  text-align: centre;
+  background: linear-gradient(132deg, #3dbdb6, #0089ce);
+  text-align: center;
+  line-height: 90px;
+  border-radius: 50%;
+}
+.columnAlign .image2 {
+  width: 90px;
+  height: 90px;
+  text-align: centre;
+  background: linear-gradient(309deg, #7a86cc, #a0adf9);
+  text-align: center;
+  line-height: 90px;
+  border-radius: 50%;
+}
+.columnAlign .image3 {
+  width: 90px;
+  height: 90px;
+  text-align: centre;
+  background: linear-gradient(to bottom, #f3778f, #f36a95 44%, #f15a9d);
+  text-align: center;
+  line-height: 90px;
+  border-radius: 50%;
+}
+.aboutIcreate {
+  background-color: #57b751;
+  height: auto;
+}
+.description {
+  padding: 60px;
+}
+.aboutStartups {
+  margin-left: 50px;
+}
+.aboutIcreate .icreateLogo {
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  background: #57b751;
+}
+.aboutIcreate .icreateLogo img {
+  width: 40%;
+  height: 40%;
+}
+.aboutIcreate .subAboutIcreate {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.logoDivision {
+  line-height: 500px;
+  margin-top: 60px;
+  padding-bottom: 20px;
+}
+.aboutIcreate .icreateMission {
+  color: white;
+}
+.subAboutIcreate p {
+  width: auto;
+}
+.child1 {
+  margin: 30px;
+}
+.child2 {
+  margin: 30px;
+}
+ul {
+  border: none;
+}
+li {
+  float: left;
+  padding: 15px;
+  color: grey;
+  list-style: none;
+}
+.deliverHappiness {
+  background-color: #0f61ab;
+  height: auto;
+  padding-bottom: 20px;
+}
+.deliverHappiness .happinesstext h5 {
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+.auto-lr-margin {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.startupEcosystem {
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  padding-bottom: 70px;
+  padding-top: 40px;
+}
+.subEco {
+  text-align: center;
+  color: white;
+}
+.subSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  padding-top: 20px;
+}
+.subDescription {
+  display: flex;
+  align-items: flex-start;
+  padding: 40px;
+}
+h3 {
+  padding: 0px;
+  margin: 0px;
+}
+.main {
+  padding: 10px;
+}
+.companiesAdvertisment {
+  display: flex;
+  justify-content: center;
+}
+.companyName {
+  padding-right: 15px;
+  color: grey;
+}
+.session {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
