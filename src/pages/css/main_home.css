@@ -9,10 +9,17 @@
   padding-top: 5px !important;
   padding-bottom: 5px !important;
 }
+.tb-padding-5 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 .home {
   color: #185a9d;
   margin: 50px;
   line-height: 7;
+}
+.noPadding {
+  padding: 0px;
 }
 .logo {
   margin-top: 20px;
@@ -40,10 +47,6 @@
   padding: 0 !important;
   line-height: 0px !important;
 }
-p {
-  width: 33%;
-  margin: auto;
-}
 .startupPortal {
   height: auto;
   background: linear-gradient(to right, #43cea2, #185a9d);
@@ -62,25 +65,19 @@ p {
 .textDefine {
   margin: 160px;
 }
-.defineText p {
-  width: 25%;
-  margin: 0px;
-  padding: 0px;
+.columnAlign h5 {
+  text-align: center;
 }
-/* h3 .roundDiv {
-    background-color: white;
-    /* width: 50px;
-    border-radius: 50%; */
+.columnAlign p {
+  color: grey;
+}
 .chooseStartup img {
   margin: 5px;
 }
 .chooseStartup2 {
-  /* display: flex;
-    flex-direction: row; */
   color: white;
   display: flex;
   flex-direction: row;
-  /* flex: 1; */
 }
 .featureDetailContainer {
   padding-bottom: 30px;
@@ -106,28 +103,21 @@ p {
 }
 .featureDetailContainer .imageDetailsContainer .defineText {
   color: #9ba5af;
-  /* text-align: center; */
-  margin-left: 25px;
-}
-.featureDetailContainer .imageDetailsContainer .columnAlign {
-  /* margin: auto; */
-  /* height: 200px; */
+  margin-left: 120px;
 }
 .featureDetailContainer .imageDetailsContainer {
   display: flex;
   flex-direction: row;
 }
 .featureDetailContainer .imageDetailsContainer .columnAlign {
-  /* flex-direction: column; */
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-content: center;
+  align-items: center;
+  justify-content: center;
   flex: 1;
 }
 .columnAlign .text {
   text-align: centre;
-  margin-left: 25px;
 }
 .columnAlign .image1 {
   width: 90px;
@@ -169,16 +159,12 @@ p {
 .aboutIcreate .icreateLogo {
   display: flex;
   justify-content: center;
-  text-align: center;
-  width: 250px;
-  height: 250px;
   border-radius: 50%;
-  background: white;
-  margin: auto;
+  background: #57b751;
 }
 .aboutIcreate .icreateLogo img {
-  width: 50%;
-  margin: 60px;
+  width: 40%;
+  height: 40%;
 }
 .aboutIcreate .subAboutIcreate {
   display: flex;
@@ -193,11 +179,6 @@ p {
 .aboutIcreate .icreateMission {
   color: white;
 }
-.aboutIcreate .icreateLogo {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-}
 .subAboutIcreate p {
   width: auto;
 }
@@ -208,7 +189,6 @@ p {
   margin: 30px;
 }
 ul {
-  margin: auto;
   border: none;
 }
 li {
@@ -222,7 +202,7 @@ li {
   height: auto;
   padding-bottom: 20px;
 }
-.deliverHappiness .happinesstext h2 {
+.deliverHappiness .happinesstext h5 {
   color: white;
   text-align: center;
   line-height: 100px;
@@ -230,4 +210,44 @@ li {
 .auto-lr-margin {
   margin-left: auto !important;
   margin-right: auto !important;
+}
+.startupEcosystem {
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  padding-bottom: 70px;
+  padding-top: 40px;
+}
+.subEco {
+  text-align: center;
+  color: white;
+}
+.subSection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  padding-top: 20px;
+}
+.subDescription {
+  display: flex;
+  align-items: flex-start;
+  padding: 40px;
+}
+h3 {
+  padding: 0px;
+  margin: 0px;
+}
+.main {
+  padding: 10px;
+}
+.companiesAdvertisment {
+  display: flex;
+  justify-content: center;
+}
+.companyName {
+  padding-right: 15px;
+  color: grey;
+}
+.session {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }

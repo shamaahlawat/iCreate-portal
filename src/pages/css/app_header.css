@@ -1,0 +1,133 @@
+.AppHeader {
+  /*
+     .navbar-nav li a {
+		color: #185a9d;
+		min-height: 70px;
+		line-height: 70px;
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+		border-bottom: 2px solid transparent !important;
+	 }
+
+	.navbar-nav li a:hover {
+		 font-weight: bold;
+		 color: #185a9d;
+		 border-bottom: 2px solid #185a9d !important;
+	//	 padding-left: 14px !important;
+
+	 }
+	
+	.navbar-nav li a:active {
+		 font-weight: bold;
+		 color: #185a9d !important;
+		 border-bottom: 2px solid #3dbdb6 ;
+		 background: #ffffff !important;
+	 }
+
+	.navbar-nav li a:visited {
+		 font-weight: bold;
+		 color: #185a9d !important;
+		 border-bottom: 2px solid #3dbdb6 ;
+		 background: #ffffff !important;
+	 }
+	 
+	 */
+}
+.AppHeader .navbar {
+  margin-bottom: 0;
+  flex: 1;
+}
+.AppHeader .navbar .logo a {
+  text-decoration: inherit;
+  color: inherit;
+}
+.AppHeader .nav-height {
+  min-height: 70px;
+}
+.AppHeader .navbar-bg {
+  background: #ffffff !important;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.4) !important;
+}
+.AppHeader .set-header-icon {
+  height: 70px;
+}
+.AppHeader .set-profile-pic {
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+}
+.AppHeader .setDropdown {
+  color: #185a9d;
+  font-weight: bold !important;
+}
+.AppHeader .setDropdown a {
+  color: #185a9d !important;
+  min-height: 70px;
+  line-height: 70px;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-bottom: 2px solid transparent !important;
+}
+.AppHeader .dropdown-menu li a {
+  color: #185a9d !important;
+  background-color: #ffffff !important;
+  line-height: 50px !important;
+  min-height: 50px !important;
+}
+.AppHeader .dropdown-menu li a:hover {
+  color: #185a9d !important;
+  background-color: #ffffff !important;
+  border-bottom: 2px solid #185a9d !important;
+  font-weight: bold;
+}
+.AppHeader .navbar-default .navbar-nav > .open > a,
+.AppHeader .navbar-default .navbar-nav > .open > a:focus,
+.AppHeader .navbar-default .navbar-nav > .open > a:hover {
+  color: #185a9d !important;
+  background-color: #ffffff !important;
+}
+.AppHeader .navbar-toggle .icon-bar {
+  background-color: #185a9d !important;
+}
+.AppHeader .navbar-default .navbar-toggle {
+  border-color: #185a9d !important;
+}
+.AppHeader .navbar-default .navbar-toggle:hover {
+  background-color: #e9f2fc !important;
+}
+.AppHeader .custom {
+  color: #185a9d;
+}
+.AppHeader .custom a {
+  color: #185a9d !important;
+  min-height: 70px;
+  line-height: 70px;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-bottom: 2px solid transparent !important;
+}
+.AppHeader .custom a:hover {
+  font-weight: bold;
+  color: #185a9d;
+  border-bottom: 2px solid #185a9d !important;
+  padding-left: 14px !important;
+}
+@media only screen and (max-width: 767px) {
+  .AppHeader .custom a {
+    color: #185a9d !important;
+    min-height: 50px;
+    line-height: 50px;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: 2px solid transparent !important;
+  }
+  .AppHeader .custom a:hover {
+    font-weight: bold;
+    color: #185a9d;
+    border-bottom: 2px solid #185a9d !important;
+    padding-left: 14px !important;
+  }
+  .AppHeader .nav-height {
+    min-height: 50px !important;
+  }
+}

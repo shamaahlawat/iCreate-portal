@@ -78,7 +78,6 @@ body {
 	padding-right: 0 !important;
 }
 
-
 .noPadding {
 	padding-left: 0 !important;
 	padding-right: 0 !important;
@@ -127,8 +126,16 @@ body {
 	margin-top: 25px;
 }
 
+.noMarginLeft {
+	margin-left: 0 !important;
+}
+
 .wordBreak {
 	word-break: break-word !important;
+}
+
+.marginBottom-2{
+	margin-bottom: 2px !important;
 }
 
 .float-none {

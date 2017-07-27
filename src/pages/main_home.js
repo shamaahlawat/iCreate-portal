@@ -7,136 +7,117 @@ import NavLink from './components/_navlinks.js';
 // import './css/page1.less';
 import './css/main_home.less';
 import Page1a from './page1a';
+import './css/app_header.less';
+
+
 
 class MainHome extends Component {
     render() {
         return (
             <div className="fluid-container">
-                <Flexbox flexDirection="row" minWidth="100vw" className="AppHeader simple from-right transition-item">
-                    <Navbar class="minHeight" collapseOnSelect>
-                        <Navbar.Header >
-                            <Navbar.Brand>
-                                <NavLink className="logo" to="/">
-                                    <img src="../assets/images/logo.png " className="img-responsive margin-top-bottom" />
-                                </NavLink>
-                            </Navbar.Brand>
-                            <Navbar.Toggle />
-                        </Navbar.Header>
-                        <Navbar.Collapse>
-                            <Nav pullRight>
-                                <NavLink className="home" to="/">
-                                    Home
-                                </NavLink>
-                                <NavLink className="home" to="/">
-                                    Sign In
-                                </NavLink>
-                                <NavLink className="home" to="/">
-                                    Sign Up
-                                </NavLink>
-                                {/* <NavDropdown eventKey={1} title="Home" id="dropdown1">
-                                    <NavLink withLi to="/page1/a">A</NavLink>
-                                    <NavLink withLi to="/page1/b">B</NavLink>
-                                </NavDropdown>
-                                <NavDropdown eventKey={2} title="Sign In " id="dropdown2">
-                                    <NavLink withLi to="/page2/a">A</NavLink>
-                                    <NavLink withLi to="/page2/b">B</NavLink>
-                                </NavDropdown> */}
-                            </Nav>
-                        </Navbar.Collapse>
+                <Flexbox flexDirection="row" minWidth="100vw" className="AppHeader marginBottom-2 simple from-right transition-item">
+                    <Navbar fluid collapseOnSelect className="nav-height  navbar-bg" >
+                        <div className="col-md-10  col-md-offset-1 noLRPadding">
+                            <Navbar.Header className="set-header-icon">
+                                <Navbar.Brand className="withoutPadding noMarginLeft ">
+                                    <NavLink className="logo noMarginTop" to="/">
+                                        <img src="../assets/images/logo.png" className="img-responsive margin-top-bottom" alt="iCreate icon" width="83px" height="61px" />
+                                    </NavLink>
+                                </Navbar.Brand>
+                                <Navbar.Toggle className="marginTop-12" />
+                            </Navbar.Header>
+                            <Navbar.Collapse >
+                                <Nav pullRight>
+                                    <NavItem eventKey={1} href="#" className="nav-height withoutPadding">Home</NavItem>
+                                    <NavItem eventKey={2} href="#" className="nav-height withoutPadding">Sign In</NavItem>
+                                    <NavItem eventKey={3} href="#" className="nav-height withoutPadding"> Sign Out </NavItem>
+                                </Nav>
+                            </Navbar.Collapse>
+                        </div>
                     </Navbar>
                 </Flexbox>
-                <div className="col-xs-12 col-md-12 section startupPortal">
+
+
+                <div className=" col-xs-12 col-md-12 startupEcosystem ">
                     <div className="col-xs-12 col-md-10 col-md-offset-1">
-                        <div className=" col-xs-12 col-md-12 portal">
+                        <div className="col-xs-12 subEco">
                             <h1> Startup Ecosystem Portal </h1>
-                            <p  >{"This is a paragraph, lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  industry's standard dummy text ever since the 1500s. "}</p>
+                            <p className="col-md-6 col-md-offset-3">This is a paragraph, lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
                         </div>
-                        <div className="col-xs-12 col-md-12 chooseStartup">
-                            <div className="col-md-3 col-md-offset-1 decription">
-
-                                <h3>
-                                    <img src="../assets/images/startup .png" alt=" not defined"></img> Startup </h3>
-                                <div className="aboutStartups">
-                                    Build a profile and share it with investors to get funding.
-                        </div>
+                        <div className="col-xs-12 col-md-12 subSection">
+                            <div className="col-xs-12 col-md-4 subDescription">
+                                <img src="../assets/images/startup.png" alt=" not defined"></img>
+                                <div className="main">
+                                    <h3>For Startup </h3>
+                                    <p>Build a profile and share it with investors to get funding.</p>
+                                </div>
                             </div>
-                            <div className=" col-md-3 col-md-offset-1 decription">
-
-                                <h3> <img src="../assets/images/growth-1 .png" alt=" not defined"></img>For Investor </h3>
-                                <div className="aboutStartups">
-                                    Access powerful deal flow management tools on a secure platform.
-                        </div>
+                            <div className="col-xs-12 col-md-4 subDescription">
+                                <img src="../assets/images/growth-1.png" alt=" not defined"></img>
+                                <div className="main">
+                                    <h3>For Investor </h3>
+                                    <p>Build a profile and share it with investors to get funding.</p>
+                                </div>
                             </div>
-                            <div className=" col-md-3 col-md-offset-1 decription">
-
-                                <h3><img src="../assets/images/speedometer .png" alt=" not defined"></img> for Accelators </h3>
-                                <div className="aboutStartups">
-                                    Increase applications, manage the application process, and make your cohorts happy.
-                        </div>
+                            <div className="col-xs-12 col-md-4 subDescription">
+                                <img src="../assets/images/speedometer .png" alt=" not defined"></img>
+                                <div className="main">
+                                    <h3>For Accelators </h3>
+                                    <p>Build a profile and share it with investors to get funding.</p>
+                                </div>
+                            </div>
+                            <div className="col-xs-12 col-md-4 subDescription">
+                                <img className="col-md-2" style={{ padding: 0 }} src="../assets/images/brainstorming.png" alt=" not defined"></img>
+                                <div className="main">
+                                    <h3>For Talent </h3>
+                                    <p>Build a profile and share it with investors to get funding.</p>
+                                </div>
+                            </div>
+                            <div className="col-xs-12 col-md-4 subDescription">
+                                <img src="../assets/images/handshake1.png" alt=" not defined"></img>
+                                <div className="main">
+                                    <h3>For Market </h3>
+                                    <p>Build a profile and share it with investors to get funding.</p>
+                                </div>
                             </div>
                         </div>
-                        <div className="col-xs-12 col-md-8 col-md-offset-2  chooseStartup2">
-                            <div className=" description">
-
-                                <h3> <img src="../assets/images/brainstorming.png" alt=" not defined"></img> For Talents </h3>
-                                <div className="aboutStartups">
-                                    Apply privately to 66,932 startup jobs with one application. No middlemen · See salary and equity upfront.
-                        </div>
-                            </div>
-                            <div className="  description">
-
-                                <h3> <img src="../assets/images/handshake1.png" alt="not defined"></img> For Markets </h3>
-                                <div className="aboutStartups">
-                                    An Indian e-portal that provides B2C, B2B and customer to customer sales services via web portal.
-                        </div>
-                            </div>
-
-                        </div>
-
                     </div>
                 </div>
-
                 <div className="col-xs-12 col-md-12 section featureDetailContainer">
                     <div className="col-xs-12 col-md-10 col-md-offset-1">
                         <div className="col-xs-12 col-md-12 textDetailsContainer">
                             All the features details
-                </div>
+                        </div>
                         <div className="col-xs-12 col-md-12 imageDetailsContainer">
-
-                            <div className="col-xs-12 col-md-10 col-md-offset-1 columnAlign">
+                            <div className=" columnAlign">
                                 <div className="  image1">
                                     <img src="../assets/images/search.png" alt="not found"></img>
                                 </div>
                                 <div className=" text">
-                                    Search
-                        </div>
-                                <div className="  defineText"><p> hello  icreate  website </p>
+                                    <h5> Search</h5>
+                                    <p>  iCreate </p>
 
                                 </div>
                             </div>
 
-                            <div className=" col-xs-12 columnAlign">
+                            <div className="columnAlign">
                                 <div className="  image2">
                                     <img src="../assets/images/post.png" alt="not found"></img>
                                 </div>
                                 <div className="text">
-                                    <b style={{ textAlign: "centre" }}> post</b>
+                                    <h5> post</h5>
+                                    <p> iCreate </p>
                                 </div>
-                                <div className="defineText"><p> hello  icreate  website </p>
 
-                                </div>
                             </div>
 
-                            <div className="col-xs-12  columnAlign">
+                            <div className="columnAlign">
                                 <div className="  image3">
                                     <img src="../assets/images/chat.png" alt=" not found"></img>
                                 </div>
                                 <div className="  text">
-                                    <b> chat</b>
-                                </div>
-                                <div className="  defineText"><p> hello  icreate  website </p>
-
-
+                                    <h5> chat </h5>
+                                    <p> iCreate </p>
                                 </div>
                             </div>
                         </div>
@@ -164,38 +145,56 @@ class MainHome extends Component {
                         </div>
                         <div className="col-xs-12 col-md-8 logoDivision">
                             <div className="icreateLogo">
-                                <img src="../assets/images/icreate.png" alt=" not found "></img>
+                                <img src="../assets/images/mission.png" alt=" not found "></img>
                             </div>
                         </div>
                     </div>
 
                 </div>
+                <div className="col-md-12 col-xs-12 session">
+                    <div className="col-xs-12 col-md-10 col-md-offset-1">
+                        <div className="companiesAdvertisment">
+                            <div className="companyName">
+                                Basecamp
+                        </div>
 
-                <div className="col-md-12 section">
-                    <div className="col-xs-12 col-md-6 col-md-offset-3">
-                        <ul>
-                            <li ><img src="../assets/images/sstar.png" alt=" not defined "></img>Basecamp</li>
-                            <li ><img src="../assets/images/sstar.png" alt=" not defined "></img>grubHub</li>
-                            <li ><img src="../assets/images/sstar.png" alt="not defined "></img>Trello</li>
-                            <li ><img src="../assets/images/sstar.png" alt=" not defined "></img>buffer</li>
-                            <li ><img src="../assets/images/sstar.png" alt=" not defined "></img>pocket</li>
-                        </ul>
+                            <div className="companyName">
+                                Basecamp
+                       </div>
+                            <div className="companyName">
+                                Basecamp
+                       </div>
+                            <div className="companyName">
+                                Basecamp
+                       </div>
+
+                        </div>
                     </div>
                 </div>
+                {/* <div className="col-md-12 section">
+                    <div className="col-xs-12 col-md-6 col-md-offset-3">
+                        <ul className="col-xs-12">
+                            <li  ><img src="../assets/images/sstar.png" alt=" not defined "></img>Basecamp</li>
+                            <li ><img src="../assets/images/sstar.png" alt=" not defined "></img>grubHub</li>
+                            <li ><img src="../assets/images/sstar.png" alt="not defined "></img>Trello</li>
+                            <li ><img src="../assets/images/sstar.png" alt="not defined "></img>Trello</li>
+                            <li ><img src="../assets/images/sstar.png" alt="not defined "></img>Trello</li>
 
+                        </ul>
+                    </div>
+                </div> */}
                 <div className="col-xs-12 col-md-12 section deliverHappiness">
                     <div className="col-xs-12 col-md-10 col-md-offset-1">
                         <div className="col-xs-12 col-md-12 happinesstext">
-                            <h2> Great Products Deliver Happiness to Users</h2>
+                            <h5> Great Products Deliver Happiness to Users</h5>
                         </div>
                         <div className="col-xs-12 col-md-12 " style={{ textAlign: "center" }}>
                             <button type="button " className="btn btn-secondary auto-lr-margin" style={{ backgroundColor: "#57b751", color: "white" }} >Get Started</button>
                         </div>
                     </div>
-                </div>
+                </div >
+            </div>
 
-
-            </div >
         )
     }
 }
