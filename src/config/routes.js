@@ -8,14 +8,23 @@ import Page2a from '../pages/page2a';
 import Page2b from '../pages/page2b';
 import SearchContainer from '../pages/search_container';
 import MainHome from '../pages/main_home';
+import Home from '../pages/home';
 
 const AppRoutes = {
 	path: '/',
-	component: MainHome,
+	component: RootContainer,
 	childRoutes: [
+		{
+			path: 'mainpage',
+			component: MainHome
+		},
 		{
 			path: 'search',
 			component: SearchContainer
+		},
+		{
+			path: 'home',
+			component: Home
 		},
 		{
 			path: 'page1',
