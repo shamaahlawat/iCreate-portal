@@ -1,0 +1,50 @@
+.homecontent h5 {
+  color: #185a9d;
+  margin-bottom: 0px;
+  margin-top: 0px !important;
+}
+.homecontent p {
+  color: black;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: left;
+}
+.homecontent .setPic {
+  width: 64px;
+  height: 64px;
+}
+.homecontent .PaddingTB-10 {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.homecontent .rightCard p {
+  margin-bottom: 0px !important;
+}
+.homecontent .marginBottom-40 {
+  margin-bottom: 40px;
+}
+.homecontent .marginBottom-20 {
+  margin-bottom: 20px;
+}
+.homecontent .spn {
+  color: green;
+}
+.homecontent th,
+.homecontent td {
+  padding: 10px;
+  text-align: left;
+}
+.homecontent table,
+.homecontent th,
+.homecontent td {
+  border: 2px solid #f2f2f2;
+  border-collapse: collapse;
+}
+.homecontent th {
+  padding: 20px;
+  background: #f2f2f2;
+  border: 1px solid #979797;
+}
+.homecontent .padding-top-20 {
+  padding-top: 20px;
+}
