@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './css/home.less';
-class Home extends Component {
+import './css/entreprenuer_home.less';
+class EntreprenuerHome extends Component {
 
     render() {
         return (
@@ -78,4 +78,4 @@ class Home extends Component {
         )
     }
 }
-export default Home;
+export default EntreprenuerHome;

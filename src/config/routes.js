@@ -8,7 +8,7 @@ import Page2a from '../pages/page2a';
 import Page2b from '../pages/page2b';
 import SearchContainer from '../pages/search_container';
 import MainHome from '../pages/main_home';
-import Home from '../pages/home';
+import EntreprenuerHome from '../pages/entreprenuer_home';
 
 const AppRoutes = {
 	path: '/',
@@ -23,8 +23,8 @@ const AppRoutes = {
 			component: SearchContainer
 		},
 		{
-			path: 'home',
-			component: Home
+			path: 'entreprenuer_home',
+			component: EntreprenuerHome
 		},
 		{
 			path: 'page1',
