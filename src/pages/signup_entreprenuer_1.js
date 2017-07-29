@@ -16,7 +16,7 @@ class SignUpEntreprenuer1 extends Component {
 						<p className="stepFont">Step</p>
 						<ul className="step noLRPadding">
 							<li>
-								<a href="/signup1" >1</a>
+								<a href="/signup1" className="activated" >1</a>
 							</li>
 							<li className="marginLeft-25">
 								<a href="/signup2">2</a>

@@ -19,7 +19,7 @@ class SignUpEntreprenuer2 extends Component {
 								<a href="/signup1" >1</a>
 							</li>
 							<li className="marginLeft-25">
-								<a href="/signup2">2</a>
+								<a href="/signup2" className="activated">2</a>
 							</li>
 						</ul>
 					</div>
@@ -44,7 +44,7 @@ class SignUpEntreprenuer2 extends Component {
 							(Please indicate the city your startup is located in.)  </p>
 						<div className="form-group col-md-12 col-sm-12 col-xs-12 marginBottom-10 ">
 							<select className="form-control" id="sel2">
-								<option  selected disabled>Please select</option>
+								<option selected disabled>Please select</option>
 								<option>Ahmedabad</option>
 								<option>Gurgaon</option>
 								<option>New Delhi</option>
