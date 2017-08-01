@@ -1,89 +1,89 @@
-.minHeight {
+.mainHome .minHeight {
   min-height: 88px;
 }
-.navSize {
+.mainHome .navSize {
   width: 100px !important;
   height: 100px !important;
 }
-.navPadding {
+.mainHome .navPadding {
   padding-top: 5px !important;
   padding-bottom: 5px !important;
 }
-.tb-padding-5 {
+.mainHome .tb-padding-5 {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-.home {
+.mainHome .home {
   color: #185a9d;
   margin: 50px;
   line-height: 7;
 }
-.noPadding {
+.mainHome .noPadding {
   padding: 0px;
 }
-.logo {
+.mainHome .logo {
   margin-top: 20px;
   margin-left: 30px;
 }
-.background {
+.mainHome .background {
   color: #185a9d !important;
   border: none !important;
   border-color: white;
 }
-.navbar {
+.mainHome .navbar {
   background-color: white !important;
 }
-.sections {
+.mainHome .sections {
   height: auto;
   background-color: white;
 }
-.nav-align {
+.mainHome .nav-align {
   padding-right: 210px !important;
   padding-left: 210px !important;
 }
-.navbar-brand {
+.mainHome .navbar-brand {
   float: left;
   height: 0px !important;
   padding: 0 !important;
   line-height: 0px !important;
 }
-.startupPortal {
+.mainHome .startupPortal {
   height: auto;
   background: linear-gradient(to right, #43cea2, #185a9d);
 }
-.startupPortal .portal {
+.mainHome .startupPortal .portal {
   color: white;
   text-align: center;
   padding-bottom: 20px;
 }
-.chooseStartup {
+.mainHome .chooseStartup {
   display: flex;
   flex-direction: row;
   color: white;
   flex: 1;
 }
-.textDefine {
+.mainHome .textDefine {
   margin: 160px;
 }
-.columnAlign h5 {
+.mainHome .columnAlign h5 {
   text-align: center;
 }
-.columnAlign p {
+.mainHome .columnAlign p {
   color: grey;
 }
-.chooseStartup img {
+.mainHome .chooseStartup img {
   margin: 5px;
 }
-.chooseStartup2 {
+.mainHome .chooseStartup2 {
   color: white;
   display: flex;
   flex-direction: row;
 }
-.featureDetailContainer {
+.mainHome .featureDetailContainer {
   padding-bottom: 30px;
   height: auto;
 }
-.featureDetailContainer .textDetailsContainer {
+.mainHome .featureDetailContainer .textDetailsContainer {
   text-decoration: none;
   color: black;
   background-color: white;
@@ -93,33 +93,33 @@
   font-size: 30px;
   padding-bottom: 15px;
 }
-.featureDetailContainer .imageDetailsContainer {
+.mainHome .featureDetailContainer .imageDetailsContainer {
   background-color: white;
   margin: auto;
 }
-.columnAlign .text {
+.mainHome .columnAlign .text {
   padding-bottom: 17px;
   padding-top: 17px;
 }
-.featureDetailContainer .imageDetailsContainer .defineText {
+.mainHome .featureDetailContainer .imageDetailsContainer .defineText {
   color: #9ba5af;
   margin-left: 120px;
 }
-.featureDetailContainer .imageDetailsContainer {
+.mainHome .featureDetailContainer .imageDetailsContainer {
   display: flex;
   flex-direction: row;
 }
-.featureDetailContainer .imageDetailsContainer .columnAlign {
+.mainHome .featureDetailContainer .imageDetailsContainer .columnAlign {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   flex: 1;
 }
-.columnAlign .text {
+.mainHome .columnAlign .text {
   text-align: centre;
 }
-.columnAlign .image1 {
+.mainHome .columnAlign .image1 {
   width: 90px;
   height: 90px;
   text-align: centre;
@@ -128,7 +128,7 @@
   line-height: 90px;
   border-radius: 50%;
 }
-.columnAlign .image2 {
+.mainHome .columnAlign .image2 {
   width: 90px;
   height: 90px;
   text-align: centre;
@@ -137,7 +137,7 @@
   line-height: 90px;
   border-radius: 50%;
 }
-.columnAlign .image3 {
+.mainHome .columnAlign .image3 {
   width: 90px;
   height: 90px;
   text-align: centre;
@@ -146,108 +146,108 @@
   line-height: 90px;
   border-radius: 50%;
 }
-.aboutIcreate {
+.mainHome .aboutIcreate {
   background-color: #57b751;
   height: auto;
 }
-.description {
+.mainHome .description {
   padding: 60px;
 }
-.aboutStartups {
+.mainHome .aboutStartups {
   margin-left: 50px;
 }
-.aboutIcreate .icreateLogo {
+.mainHome .aboutIcreate .icreateLogo {
   display: flex;
   justify-content: center;
   border-radius: 50%;
   background: #57b751;
 }
-.aboutIcreate .icreateLogo img {
+.mainHome .aboutIcreate .icreateLogo img {
   width: 40%;
   height: 40%;
 }
-.aboutIcreate .subAboutIcreate {
+.mainHome .aboutIcreate .subAboutIcreate {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-.logoDivision {
+.mainHome .logoDivision {
   line-height: 500px;
   margin-top: 60px;
   padding-bottom: 20px;
 }
-.aboutIcreate .icreateMission {
+.mainHome .aboutIcreate .icreateMission {
   color: white;
 }
-.subAboutIcreate p {
+.mainHome .subAboutIcreate p {
   width: auto;
 }
-.child1 {
+.mainHome .child1 {
   margin: 30px;
 }
-.child2 {
+.mainHome .child2 {
   margin: 30px;
 }
-ul {
+.mainHome ul {
   border: none;
 }
-li {
+.mainHome li {
   float: left;
   padding: 15px;
   color: grey;
   list-style: none;
 }
-.deliverHappiness {
+.mainHome .deliverHappiness {
   background-color: #0f61ab;
   height: auto;
   padding-bottom: 20px;
 }
-.deliverHappiness .happinesstext h5 {
+.mainHome .deliverHappiness .happinesstext h5 {
   color: white;
   text-align: center;
   line-height: 100px;
 }
-.auto-lr-margin {
+.mainHome .auto-lr-margin {
   margin-left: auto !important;
   margin-right: auto !important;
 }
-.startupEcosystem {
+.mainHome .startupEcosystem {
   background: linear-gradient(to right, #43cea2, #185a9d);
   padding-bottom: 70px;
   padding-top: 40px;
 }
-.subEco {
+.mainHome .subEco {
   text-align: center;
   color: white;
 }
-.subSection {
+.mainHome .subSection {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   color: white;
   padding-top: 20px;
 }
-.subDescription {
+.mainHome .subDescription {
   display: flex;
   align-items: flex-start;
   padding: 40px;
 }
-h3 {
+.mainHome h3 {
   padding: 0px;
   margin: 0px;
 }
-.main {
+.mainHome .main {
   padding: 10px;
 }
-.companiesAdvertisment {
+.mainHome .companiesAdvertisment {
   display: flex;
   justify-content: center;
 }
-.companyName {
+.mainHome .companyName {
   padding-right: 15px;
   color: grey;
 }
-.session {
+.mainHome .session {
   padding-top: 30px;
   padding-bottom: 30px;
 }
