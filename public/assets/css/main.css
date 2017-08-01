@@ -1,102 +1,114 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
-body {
-    font-family: 'Roboto', serif !important;
-    letter-spacing: 1px;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
 
-.transition-wrapper {
-    width: 100%  !important;
+body {
+	font-family: 'Roboto', serif !important;
+	letter-spacing: 1px;
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
+	width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-    border-radius: 10px;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
-
 
 /*common*/
-
 .tb-padding-5 {
-    padding-top: 5px !important;
-    padding-bottom: 5px !important;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
 }
 
-.tb-padding-20 {
-    padding-top: 20px !important;
-    padding-bottom: 20px !important;
+.tb-padding-20{
+	padding-top: 20px !important;
+	padding-bottom: 20px !important;
 }
 
-.top-margin-12 {
-    margin-top: 12px;
+.top-margin-12{
+	margin-top: 12px;
+}
+	
+.top-padding-10{
+	padding-top: 10px;
 }
 
-.top-padding-10 {
-    padding-top: 10px;
+.top-margin-25{
+	margin-top: 25px;
 }
 
-.top-margin-25 {
-    margin-top: 25px;
+.bottom-margin-20{
+	margin-bottom: 20px;
 }
 
-.bottom-margin-20 {
-    margin-bottom: 20px;
+.bottom-margin-10{
+	margin-bottom: 10px;
 }
 
-.bottom-margin-10 {
-    margin-bottom: 10px;
+.left-margin-40{
+	margin-left: 40px;
 }
 
-.left-margin-40 {
-    margin-left: 40px;
+.textCenter {
+	text-align: center !important;
+}
+
+.setFontColor {
+		color:#0f61ab !important;
+}
+
+.fontSize-25{
+	font-size: 25px !important;
 }
 
 .withPadding {
-    padding-left: 15px;
-    padding-right: 15px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .withoutPadding {
-    padding: 0 !important;
+	padding: 0 !important;
 }
 
 .noLRPadding {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 }
 
+
 .noPadding {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 }
 
 .noPaddingLeft {
-    padding-left: 0 !important;
+	padding-left: 0 !important;
 }
 
 .noPaddingRight {
-    padding-right: 0 !important;
+	padding-right: 0 !important;
 }
 
-.paddingTop-10 {
-    padding-top: 10px;
+.paddingTop-10{
+	padding-top: 10px;
+}
+
+.paddingTop-20{
+	padding-top: 20px !important;
 }
 
 .paddingBottom-10{
@@ -108,127 +120,164 @@ body {
 }
 
 .noMargin {
-    margin: 0 !important;
+	margin: 0 !important;
 }
 
-.noMarginLeft {
-    margin-left: 0 !important;
+.noMarginLeft{
+	margin-left: 0 !important;
 }
 
 .noMarginTop {
-    margin-top: 0 !important;
+	margin-top: 0 !important;
 }
 
 .noMarginBottom {
-    margin-bottom: 0 !important;
+	margin-bottom: 0 !important;
 }
 
 .marginBottom-2 {
-    margin-bottom: 2px;
+    margin-bottom:2px; 
+}
+
+.marginBottom-5 {
+	margin-bottom: 5px;
+}
+.marginBottom-10{
+	margin-bottom: 10px !important;
+}
+
+.marginBottom-15{
+	margin-bottom: 15px;
+}
+
+.marginBottom-20{
+	margin-bottom: 20px !important;
 }
 
 .marginTop-10 {
-    margin-top: 10px;
+	margin-top: 10px;
 }
 
-.marginTop-12 {
-    margin-top: 12px !important;
+.marginTop-12{
+	margin-top: 12px !important;
 }
 
+.marginTop-20{
+	margin-top: 20px !important;
+}
 .marginTop-25 {
-    margin-top: 25px;
+	margin-top: 25px;
 }
 
-.noMarginLeft {
-    margin-left: 0 !important;
+.marginTB-25{
+	margin-top: 25px !important;
+	margin-bottom: 25px !important;
+}
+
+.marginLeft-25 {
+    margin-left: 25px;
+}
+
+.noBorderRadius {
+	border-radius: 0px !important;
 }
 
 .wordBreak {
-    word-break: break-word !important;
-}
-
-.marginBottom-2 {
-    margin-bottom: 2px !important;
+	word-break: break-word !important;
 }
 
 .float-none {
-    float: none;
+	float: none;
 }
 
 .clear-both {
-    clear: both !important;
+	clear: both !important;
 }
 
 .clear-right {
-    clear: right !important;
+	clear: right !important;
 }
 
 .clear-left {
-    clear: left !important;
+	clear: left !important;
 }
 
 .clear-none {
-    clear: none !important;
+	clear: none !important;
 }
 
-.isRelative {
-    position: relative;
+.isRelative{
+	position: relative;
 }
 
 .fullWidth {
-    width: 100%;
+	width: 100%;
 }
 
 hr {
-    border-color: #979797;
+	border-color: #979797;
 }
 
 .disabled {
-    cursor: not-allowed !important;
+	cursor: not-allowed !important;
 }
 
 .whiteBackground {
-    background: #fff;
+	background: #fff;
 }
 
 .circularItem {
-    border-radius: 50%;
+	border-radius: 50%;
 }
 
 .actionBtn {
-    background: #e54343;
-    color: #fff;
-    padding: 5px 20px 7px 20px;
-    border-radius: 20px;
+	background: #e54343;
+	color: #fff;
+	padding: 5px 20px 7px 20px;
+	border-radius: 20px;
 }
 
-.actionBtn>a,
-.actionBtn>a:focus,
-.actionBtn>a:hover {
-    color: inherit !important;
-    outline: none;
-    text-decoration: inherit !important;
+.actionBtn > a, .actionBtn > a:focus, .actionBtn > a:hover {
+	color: inherit !important;
+	outline: none;
+	text-decoration: inherit !important;
 }
 
 .RedLinkText {
-    color: #fd342a;
-    cursor: pointer;
+	color: #fd342a;
+	cursor: pointer;
 }
 
-@media only screen and (min-width: 768px) {
-    .MobileView {
-        display: none !important;
-    }
-    .DesktopView {
-        display: block !important;
-    }
+.bg-color{
+	background-color: #ffffff !important;
 }
 
-@media only screen and (max-width: 767px) {
-    .DesktopView {
-        display: none !important;
-    }
-    .MobileView {
-        display: block !important;
-    }
+
+@media only screen and (min-width : 768px) {
+
+	.MobileView {
+		display: none !important;
+	}
+
+	.DesktopView {
+		display: block !important;
+	}
 }
+
+@media only screen and (max-width : 767px) {
+
+	.DesktopView {
+		display: none !important;
+	}
+
+	.MobileView {
+		display: block !important;
+	}
+}
+
+/* overrides */
+.transition-wrapper {
+	width: 100%;	
+}
+
+

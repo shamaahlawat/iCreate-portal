@@ -36,9 +36,9 @@ class SignUpEntreprenuer1 extends Component {
 						<p className="formFont">Enter Email</p>
 						<div className="col-md-12 col-sm-12 col-xs-12 marginBottom-10 ">
 							<input type="email" className="form-control" placeholder="Enter Email"></input>
-                        </div>
-						
-						<div className="col-md-12 col-sm-12 col-xs-12 noLRPadding marginBottom-10 ">	
+						</div>
+
+						<div className="col-md-12 col-sm-12 col-xs-12 noLRPadding marginBottom-10 ">
 							<div className="col-md-6 col-sm-12 col-xs-12 marginBottom-5">
 								<p className="formFont noMarginLeft">Enter Password</p>
 								<input type="password" className="form-control" placeholder="Enter Password"></input>
