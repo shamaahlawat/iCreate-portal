@@ -7,18 +7,28 @@
     }
     .problems img {
         width: 100%;
-    }
+    } // .wholeProblem {
+    //     position: absolute;
+    //     margin-top: 20px;
+    // }
     .problems {
-        background: white;
-        position: absolute;
-        z-index: 1;
-        float: left;
-        top: -31%;
-        left: 30px;
+        background: white; // position: absolute;
+        z-index: 1; // top: -31%;
+        // left: 30px;
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
     }
-    .overview {
-        float: right;
+    @media only screen and (min-width:768px) {
+        .overview {
+            float: right;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .overview {}
+    }
+    .marginBottom-0 {
+        margin-bottom: 0px;
     }
     .noMargin {
         margin: 0px;
@@ -39,8 +49,8 @@
     .nameSection h4 {
         color: #4c5667;
     }
-    .main {
-        position: absolute;
+    .Main_one {
+        float: right;
     }
     .stage p {
         color: #4c5667;
@@ -70,21 +80,85 @@
     .listRight {
         float: right;
     }
-    .uploadPic {
-        position: absolute;
-        right: 0px;
-        bottom: 30px;
-        z-index: 1;
-        right: 100px;
+    .listLeft ul {
+        padding-left: 35px;
+    }
+    .blueText {
+        color: #0f61ab;
+    }
+    .addImage {
+        height: 35px;
+        width: 35px;
+    }
+    .add {
+        display: flex;
+        justify-content: space-between;
+    }
+    .add h5 {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    @media only screen and (max-width: 767px) {
+        .blueText {
+            text-align: center;
+            font-size: 18px;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        .blueText {}
+    }
+    @media only screen and (max-width: 767px) {
+        .overviewDetail {
+            background-color: #ffffff;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+            margin-top: 10px !important;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        .overviewDetail {
+            background-color: #ffffff;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+            padding-left: 10px;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        .uploadPic {
+            position: absolute;
+            right: 0px;
+            bottom: 30px;
+            z-index: 1;
+            right: 100px;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .uploadPic {
+            position: absolute;
+            right: 0px;
+            z-index: 1;
+            right: 40px;
+            margin-top: 60px;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        .wholeProblem {
+            position: absolute;
+            margin-top: 15px;
+            padding-right: 0px;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .wholeProblem {
+            position: none;
+            margin-top: 20px;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        video {
+            height: 210px;
+        }
     }
     .timeline {
         position: relative;
-    }
-    .switch {
-        position: relative;
-        display: inline-block;
-        width: 60px;
-        height: 34px;
     }
     .switch input {
         display: none;
@@ -123,10 +197,6 @@
     input:checked+.slider:before {
         transform: translateX(26px);
     }
-    .overviewDetail {
-        background-color: #ffffff;
-        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
-    }
     li {
         padding-bottom: 0px;
         padding-left: 10px;
@@ -134,9 +204,6 @@
         line-height: 5rem;
         list-style: none;
         float: left;
-    }
-    .blueText {
-        color: #0f61ab;
     }
     .greenText {
         color: #57b751 !important;
@@ -150,6 +217,8 @@
     }
     .ownersDetails {
         display: flex;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     .ownerName h5 {
         padding-top: 0px;
@@ -166,17 +235,15 @@
     }
     .BottomLine {
         border-bottom: solid 0.5px rgba(0, 0, 0, .12);
-        padding-top: 5px;
+        padding-top: 15px;
         padding-bottom: 10px;
     }
     .bottomBorder {
         border-bottom: 0px;
     }
     .socialMedia {
-        position: absolute;
-        bottom: 409px;
-        left: 30px;
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+        margin-top: 15px;
     }
     .padding-15 {
         padding: 15px;
@@ -185,10 +252,9 @@
         padding: 10px;
     }
     .tags {
-        position: absolute;
-        bottom: 212px;
-        left: 30px;
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+        margin-top: 15px;
+        padding-top: 10px;
     }
     .tagsName {
         border-radius: 5px;
@@ -200,5 +266,27 @@
         display: flex;
         flex-wrap: wrap;
         flex-flow: row wrap;
+        margin-top: 10px;
+    }
+    @media only screen and (min-width: 768px) {
+        .companySummary {
+            margin-left: 30px;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .companySummary {
+            margin-top: 0px;
+            margin: 0px;
+        }
+    }
+    @media only screen and (min-width: 768px) {
+        .overviewDetail {
+            margin: 0px;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .overviewDetail {
+            margin-top: 5px;
+        }
     }
 }
