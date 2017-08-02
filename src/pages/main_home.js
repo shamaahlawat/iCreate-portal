@@ -14,7 +14,7 @@ import './css/app_header.less';
 class MainHome extends Component {
     render() {
         return (
-            <div className="fluid-container">
+            <div className="fluid-container mainHome">
                 <Flexbox flexDirection="row" minWidth="100vw" className="AppHeader marginBottom-2 simple from-right transition-item">
                     <Navbar fluid collapseOnSelect className="nav-height  navbar-bg" >
                         <div className="col-md-10  col-md-offset-1 noLRPadding">
