@@ -1,15 +1,7 @@
 import React, { Component } from 'react';
-import Flexbox from 'flexbox-react';
-import { ButtonToolbar, Button } from 'react-bootstrap';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
-import NavLink from './components/_navlinks.js';
-// import './css/page1.less';
 import './css/main_home.less';
-import Page1a from './page1a';
 import './css/app_header.less';
-
-
 
 class MainHome extends Component {
     render() {

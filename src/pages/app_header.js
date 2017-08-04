@@ -1,6 +1,5 @@
-
 import React, { Component } from 'react';
-import { Link } from 'react-router';
+import {browserHistory} from 'react-router';
 import Flexbox from 'flexbox-react';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
@@ -27,7 +26,7 @@ class AppHeader extends Component {
 							<Nav pullRight>
 								<NavItem eventKey={1} href="#" className="nav-height custom">Home</NavItem>
 								<NavItem eventKey={2} href="#" className="nav-height custom">Search</NavItem>
-								<NavItem eventKey={3} href="#" className="nav-height custom">Connection</NavItem>
+								<NavItem eventKey={3} href="#"  className="nav-height custom">Connection</NavItem>
 
 								<NavDropdown eventKey={4} title={
 									<span>

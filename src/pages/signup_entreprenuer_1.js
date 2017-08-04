@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import Flexbox from 'flexbox-react';
-import { Accordion, Panel, PageHeader, PanelGroup, ListGroup, ListGroupItem } from 'react-bootstrap';
 import './css/signup_entreprenuer.less';
 
 class SignUpEntreprenuer1 extends Component {
