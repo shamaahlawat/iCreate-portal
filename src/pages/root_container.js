@@ -5,7 +5,7 @@ import PageTransition from 'react-router-page-transition';
 
 import AppHeader from './app_header';
 import FooterContainer from './footer_section';
-import MainPage from './main';
+import MainPage from './main_home';
 
 injectTapEventPlugin();
 

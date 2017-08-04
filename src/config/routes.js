@@ -20,7 +20,7 @@ const AppRoutes = {
 	component: RootContainer,
 	childRoutes: [
 		{
-			path: 'mainpage',
+			path: 'home',
 			component: MainHome
 		},
 		{
@@ -50,34 +50,6 @@ const AppRoutes = {
 		{
 			path: 'forgotpassword',
 			component: ForgotPassword
-		},
-		{
-			path: 'page1',
-			component: Page1,
-			childRoutes: [
-				{
-					path: 'a',
-					component: Page1a
-				},
-				{
-					path: 'b',
-					component: Page1b
-				}
-			]
-		},
-		{
-			path: 'page2',
-			component: Page2,
-			childRoutes: [
-				{
-					path: 'a',
-					component: Page2a
-				},
-				{
-					path: 'b',
-					component: Page2b
-				}
-			]
 		}
 	]
 };

@@ -15,28 +15,6 @@ class MainHome extends Component {
     render() {
         return (
             <div className="fluid-container mainHome">
-                <Flexbox flexDirection="row" minWidth="100vw" className="AppHeader marginBottom-2 simple from-right transition-item">
-                    <Navbar fluid collapseOnSelect className="nav-height  navbar-bg" >
-                        <div className="col-md-10  col-md-offset-1 noLRPadding">
-                            <Navbar.Header className="set-header-icon">
-                                <Navbar.Brand className="withoutPadding noMarginLeft ">
-                                    <NavLink className="logo noMarginTop" to="/">
-                                        <img src="../assets/images/logo.png" className="img-responsive margin-top-bottom" alt="iCreate icon" width="83px" height="61px" />
-                                    </NavLink>
-                                </Navbar.Brand>
-                                <Navbar.Toggle className="marginTop-12" />
-                            </Navbar.Header>
-                            <Navbar.Collapse >
-                                <Nav pullRight>
-                                    <NavItem eventKey={1} href="#" className="nav-height withoutPadding">Home</NavItem>
-                                    <NavItem eventKey={2} href="#" className="nav-height withoutPadding">Sign In</NavItem>
-                                    <NavItem eventKey={3} href="#" className="nav-height withoutPadding"> Sign Out </NavItem>
-                                </Nav>
-                            </Navbar.Collapse>
-                        </div>
-                    </Navbar>
-                </Flexbox>
-
 
                 <div className=" col-xs-12 col-md-12 startupEcosystem ">
                     <div className="col-xs-12 col-md-10 col-md-offset-1">
