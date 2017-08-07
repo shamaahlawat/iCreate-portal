@@ -1,3 +1,6 @@
+.EntreprenuerContent .fontColor {
+  color: #4c5667;
+}
 .EntreprenuerContent .timeline h4 {
   color: #185a9d;
 }
@@ -17,6 +20,12 @@
     float: right;
     padding-left: 0px;
     padding-right: 0px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .EntreprenuerContent .publicAccess {
+    padding-left: 110px;
+    text-align: center;
   }
 }
 .EntreprenuerContent .marginBottom-0 {
@@ -76,7 +85,10 @@
   padding-left: 35px;
 }
 .EntreprenuerContent .blueText {
-  color: #0f61ab;
+  color: #4c5667;
+}
+.EntreprenuerContent .lightBlue a {
+  color: #0f61ab !important;
 }
 .EntreprenuerContent .addImage {
   height: 35px;
@@ -86,9 +98,22 @@
   display: flex;
   justify-content: space-between;
 }
+.EntreprenuerContent .owners b {
+  color: #4c5667;
+}
+.EntreprenuerContent i {
+  padding: 10px;
+}
 .EntreprenuerContent .add h5 {
   margin-top: 0px;
   padding-top: 0px;
+}
+.EntreprenuerContent .ownerName h5 {
+  color: #4c5667;
+}
+.EntreprenuerContent .ownerName p {
+  color: #4c5667;
+  opacity: 0.51;
 }
 @media only screen and (max-width: 767px) {
   .EntreprenuerContent .blueText {
@@ -186,13 +211,20 @@
 .EntreprenuerContent input:checked + .slider:before {
   transform: translateX(26px);
 }
-.EntreprenuerContent li {
-  padding-bottom: 0px;
-  padding-left: 10px;
-  padding-right: 15px;
-  line-height: 5rem;
-  list-style: none;
+.EntreprenuerContent .listBar {
+  list-style-type: none;
+}
+.EntreprenuerContent .listBar li {
   float: left;
+  height: 40px;
+  text-align: center;
+}
+.EntreprenuerContent .listBar li a {
+  text-align: center;
+  color: #4c5667;
+  font-weight: bold;
+  line-height: 40px;
+  text-decoration: none !important;
 }
 .EntreprenuerContent .greenText {
   color: #57b751 !important;
@@ -277,4 +309,13 @@
   .EntreprenuerContent .overviewDetail {
     margin-top: 5px;
   }
+}
+.EntreprenuerContent .listBorder {
+  border-bottom: 2px solid transparent;
+}
+.EntreprenuerContent .listBorder:hover {
+  border-bottom: 2px solid #0f61ab;
+}
+.EntreprenuerContent .noMarginBottom {
+  margin-bottom: 0px !important;
 }

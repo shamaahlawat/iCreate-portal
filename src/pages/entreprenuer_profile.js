@@ -85,17 +85,20 @@ class EntreprenuerProfile extends Component {
                                 </div>
 
                             </div>
-                            <div className="col-xs-12 col-md-12 socialMedia padding-15">
-                                <div className="mediaText BottomLine">
+                            <div className="col-xs-12 col-md-12 socialMedia">
+                                <div className="mediaText BottomLine fontColor">
                                     Social Media
                          </div>
-                                <div className="socialSites padding-5">
+                                <div className="socialSites">
+                                    <i className="fa fa-facebook" style={{ color: "#4c5667", fontSize: "30px", opacity: "0.51" }}></i>
+                                    <i className="fa fa-twitter" style={{ color: "#4c5667", fontSize: "30px", opacity: "0.51" }}></i>
+                                    <i className="fa fa-instagram" style={{ color: "#4c5667", fontSize: "30px", opacity: "0.51" }}></i>
 
 
                                 </div>
                             </div>
                             <div className="col-xs-12 col-md-12 tags">
-                                <div className="tagText BottomLine">
+                                <div className="tagText BottomLine fontColor">
                                     Tags
                         </div>
                                 <div className="tagsDiv">
@@ -117,13 +120,15 @@ class EntreprenuerProfile extends Component {
 
                             <div className="col-xs-12 col-md-12 overviewDetail ">
 
-                                <ul className="col-md-6 col-xs-12  listLeft">
-                                    <li className=" col-md-4 col-xs-12" ><a href="#/" >Overview </a></li>
-                                    <li className="col-md-4 col-xs-12"><a href="#/" >Pitch Deck </a></li>
+                                <ul className="listBar col-md-6 col-xs-12  listLeft noMarginBottom">
+                                    <li className=" col-md-4 col-xs-12 listBorder" ><a href="#/" >Overview </a></li>
+                                    <li className="col-md-4 col-xs-12 listBorder" ><a href="#/" >Pitch Deck </a></li>
                                 </ul>
 
-                                <ul className="col-md-5 col-xs-12 listRight noPadding noMargin">
-                                    <li className="blueText"> Public Access </li>
+                                <ul className="listBar col-md-5 col-xs-12 listRight noPadding noMargin">
+                                    <li className="lightBlue publicAccess" style={{ color: "#0f61ab" }}>
+                                        <a href="#"> Public Access  </a>
+                                    </li>
                                     {/* <li>   <label className="switch noPadding noMargin">
                                         <input type="checkbox" />
                                         <span className="slider round"></span>

@@ -1,4 +1,7 @@
 .EntreprenuerContent {
+    .fontColor {
+        color: #4c5667;
+    }
     .timeline h4 {
         color: #185a9d;
     }
@@ -7,14 +10,10 @@
     }
     .problems img {
         width: 100%;
-    } // .wholeProblem {
-    //     position: absolute;
-    //     margin-top: 20px;
-    // }
+    }
     .problems {
-        background: white; // position: absolute;
-        z-index: 1; // top: -31%;
-        // left: 30px;
+        background: white;
+        z-index: 1;
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
     }
     @media only screen and (min-width:768px) {
@@ -22,6 +21,12 @@
             float: right;
             padding-left: 0px;
             padding-right: 0px;
+        }
+    }
+    @media only screen and (max-width: 767px) {
+        .publicAccess {
+            padding-left: 110px;
+            text-align: center;
         }
     }
     @media only screen and (max-width: 767px) {
@@ -84,7 +89,10 @@
         padding-left: 35px;
     }
     .blueText {
-        color: #0f61ab;
+        color: #4c5667;
+    }
+    .lightBlue a {
+        color: #0f61ab !important;
     }
     .addImage {
         height: 35px;
@@ -94,9 +102,22 @@
         display: flex;
         justify-content: space-between;
     }
+    .owners b {
+        color: #4c5667;
+    }
+    i {
+        padding: 10px;
+    }
     .add h5 {
         margin-top: 0px;
         padding-top: 0px;
+    }
+    .ownerName h5 {
+        color: #4c5667;
+    }
+    .ownerName p {
+        color: #4c5667;
+        opacity: 0.51;
     }
     @media only screen and (max-width: 767px) {
         .blueText {
@@ -196,14 +217,28 @@
     }
     input:checked+.slider:before {
         transform: translateX(26px);
+    } // li {
+    //     padding-bottom: 0px;
+    //     padding-left: 10px;
+    //     padding-right: 15px;
+    //     line-height: 5rem;
+    //     list-style: none;
+    //     float: left;
+    // }
+    .listBar {
+        list-style-type: none;
     }
-    li {
-        padding-bottom: 0px;
-        padding-left: 10px;
-        padding-right: 15px;
-        line-height: 5rem;
-        list-style: none;
+    .listBar li {
         float: left;
+        height: 40px;
+        text-align: center;
+    }
+    .listBar li a {
+        text-align: center;
+        color: #4c5667;
+        font-weight: bold;
+        line-height: 40px;
+        text-decoration: none !important;
     }
     .greenText {
         color: #57b751 !important;
@@ -288,5 +323,14 @@
         .overviewDetail {
             margin-top: 5px;
         }
+    }
+    .listBorder {
+        border-bottom: 2px solid transparent;
+    }
+    .listBorder:hover {
+        border-bottom: 2px solid #0f61ab;
+    }
+    .noMarginBottom {
+        margin-bottom: 0px !important;
     }
 }
