@@ -1,0 +1,321 @@
+.EntreprenuerContent .fontColor {
+  color: #4c5667;
+}
+.EntreprenuerContent .timeline h4 {
+  color: #185a9d;
+}
+.EntreprenuerContent .timeline img {
+  width: 100%;
+}
+.EntreprenuerContent .problems img {
+  width: 100%;
+}
+.EntreprenuerContent .problems {
+  background: white;
+  z-index: 1;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+}
+@media only screen and (min-width: 768px) {
+  .EntreprenuerContent .overview {
+    float: right;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .EntreprenuerContent .publicAccess {
+    padding-left: 110px;
+    text-align: center;
+  }
+}
+.EntreprenuerContent .marginBottom-0 {
+  margin-bottom: 0px;
+}
+.EntreprenuerContent .noMargin {
+  margin: 0px;
+}
+.EntreprenuerContent .paddingTop-25 {
+  padding-top: 25px;
+}
+.EntreprenuerContent .paddingTop-15 {
+  padding-top: 15px;
+}
+.EntreprenuerContent .nameSection {
+  text-align: center;
+}
+.EntreprenuerContent .nameSection p {
+  opacity: 0.5;
+  font-size: 12px;
+}
+.EntreprenuerContent .nameSection h4 {
+  color: #4c5667;
+}
+.EntreprenuerContent .Main_one {
+  float: right;
+}
+.EntreprenuerContent .stage p {
+  color: #4c5667;
+  opacity: 0.5;
+}
+.EntreprenuerContent .stage .right {
+  color: black;
+}
+.EntreprenuerContent .stage .left {
+  color: #4c5667;
+  opacity: 0.5;
+}
+.EntreprenuerContent .stage {
+  padding-top: 15px;
+}
+.EntreprenuerContent .stageContent {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.EntreprenuerContent .noTopPadding {
+  padding-top: 0px !important;
+}
+.EntreprenuerContent .marginTop {
+  margin-top: 15px;
+}
+.EntreprenuerContent .listRight {
+  float: right;
+}
+.EntreprenuerContent .listLeft ul {
+  padding-left: 35px;
+}
+.EntreprenuerContent .blueText {
+  color: #4c5667;
+}
+.EntreprenuerContent .lightBlue a {
+  color: #0f61ab !important;
+}
+.EntreprenuerContent .addImage {
+  height: 35px;
+  width: 35px;
+}
+.EntreprenuerContent .add {
+  display: flex;
+  justify-content: space-between;
+}
+.EntreprenuerContent .owners b {
+  color: #4c5667;
+}
+.EntreprenuerContent i {
+  padding: 10px;
+}
+.EntreprenuerContent .add h5 {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.EntreprenuerContent .ownerName h5 {
+  color: #4c5667;
+}
+.EntreprenuerContent .ownerName p {
+  color: #4c5667;
+  opacity: 0.51;
+}
+@media only screen and (max-width: 767px) {
+  .EntreprenuerContent .blueText {
+    text-align: center;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .EntreprenuerContent .overviewDetail {
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+    margin-top: 10px !important;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .EntreprenuerContent .overviewDetail {
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+    padding-left: 10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .EntreprenuerContent .uploadPic {
+    position: absolute;
+    right: 0px;
+    bottom: 30px;
+    z-index: 1;
+    right: 100px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .EntreprenuerContent .uploadPic {
+    position: absolute;
+    right: 0px;
+    z-index: 1;
+    right: 40px;
+    margin-top: 60px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .EntreprenuerContent .wholeProblem {
+    position: absolute;
+    margin-top: 15px;
+    padding-right: 0px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .EntreprenuerContent .wholeProblem {
+    position: none;
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .EntreprenuerContent video {
+    height: 210px;
+  }
+}
+.EntreprenuerContent .timeline {
+  position: relative;
+}
+.EntreprenuerContent .switch input {
+  display: none;
+}
+.EntreprenuerContent .slider.round {
+  border-radius: 34px;
+}
+.EntreprenuerContent .slider.round:before {
+  border-radius: 50%;
+}
+.EntreprenuerContent .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.EntreprenuerContent .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.EntreprenuerContent input:checked + .slider {
+  background-color: #2196F3;
+}
+.EntreprenuerContent input:checked + .slider:before {
+  transform: translateX(26px);
+}
+.EntreprenuerContent .listBar {
+  list-style-type: none;
+}
+.EntreprenuerContent .listBar li {
+  float: left;
+  height: 40px;
+  text-align: center;
+}
+.EntreprenuerContent .listBar li a {
+  text-align: center;
+  color: #4c5667;
+  font-weight: bold;
+  line-height: 40px;
+  text-decoration: none !important;
+}
+.EntreprenuerContent .greenText {
+  color: #57b751 !important;
+}
+.EntreprenuerContent .greyText {
+  color: grey;
+  opacity: 0.5;
+}
+.EntreprenuerContent .companyVideo {
+  padding-top: 20px;
+}
+.EntreprenuerContent .ownersDetails {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.EntreprenuerContent .ownerName h5 {
+  padding-top: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 400 !important;
+}
+.EntreprenuerContent .ownerImage {
+  padding-right: 10px;
+}
+.EntreprenuerContent .ownerName p {
+  color: #4c5667;
+  opacity: 51%;
+}
+.EntreprenuerContent .BottomLine {
+  border-bottom: solid 0.5px rgba(0, 0, 0, 0.12);
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.EntreprenuerContent .bottomBorder {
+  border-bottom: 0px;
+}
+.EntreprenuerContent .socialMedia {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  margin-top: 15px;
+}
+.EntreprenuerContent .padding-15 {
+  padding: 15px;
+}
+.EntreprenuerContent .padding-5 {
+  padding: 10px;
+}
+.EntreprenuerContent .tags {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  margin-top: 15px;
+  padding-top: 10px;
+}
+.EntreprenuerContent .tagsName {
+  border-radius: 5px;
+  background-color: #d8d8d8;
+  padding: 5px;
+  margin: 10px;
+}
+.EntreprenuerContent .tagsDiv {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  margin-top: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .EntreprenuerContent .companySummary {
+    margin-left: 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .EntreprenuerContent .companySummary {
+    margin-top: 0px;
+    margin: 0px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .EntreprenuerContent .overviewDetail {
+    margin: 0px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .EntreprenuerContent .overviewDetail {
+    margin-top: 5px;
+  }
+}
+.EntreprenuerContent .listBorder {
+  border-bottom: 2px solid transparent;
+}
+.EntreprenuerContent .listBorder:hover {
+  border-bottom: 2px solid #0f61ab;
+}
+.EntreprenuerContent .noMarginBottom {
+  margin-bottom: 0px !important;
+}
