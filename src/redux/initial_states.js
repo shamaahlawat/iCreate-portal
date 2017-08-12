@@ -15,6 +15,31 @@ export const initialStates = {
 		},
 	},
 
+	user_details:{
+		signup_details:{
+			email:"",
+			first_name:"",
+			last_name: "",
+			password:"",
+			password_confirmation:"",
+			role:"",
+			company_details:{
+				name:"",
+				incorporation_type:"",
+				location_attributes:{
+					name:"",
+					latitude:0,
+					longitude:0
+				}
+				
+			}
+		},
+		signin_details:{
+			email:"",
+			password:""
+		}
+	},
+
 	count_details: {
 		current_count: 0
 	}

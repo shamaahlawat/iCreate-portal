@@ -1,7 +1,42 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import {bindActionCreators} from 'redux';
 import './css/signup_entreprenuer.less';
 
+import * as userActions from '../redux/actions/user_action';
+import { browserHistory } from 'react-router';
+
+var dotProp = require('dot-prop-immutable');
+
+function mapDispatchToProps(dispatch) {
+	return {
+		actions: bindActionCreators(Object.assign({}, userActions), dispatch)
+	};
+};
+
+function mapStateToProps(state) {
+	return {
+		user_info: state.user_details
+	};
+};
+
 class SignUpEntreprenuer1 extends Component {
+	constructor(){
+		super();
+		this.handleInputChange=this.handleInputChange.bind(this);
+	}
+
+	handleInputChange = (event) => {
+		// console.log(event.target.name);
+		// console.log(event.target.value);
+		this.props.actions.updateUserDetails(event.target.name, event.target.value);
+	};
+
+	goToStepTwo = () => {
+		// console.log("step2")
+		browserHistory.push('/signup2');
+	};
+
 	render() {
 		return (
 
@@ -14,10 +49,10 @@ class SignUpEntreprenuer1 extends Component {
 						<p className="stepFont">Step</p>
 						<ul className="step noLRPadding">
 							<li>
-								<a href="/signup1" className="activated" >1</a>
+								<button  className="activated" >1</button>
 							</li>
 							<li className="marginLeft-25">
-								<a href="/signup2">2</a>
+								<button onClick={() => this.goToStepTwo()} >2</button>
 							</li>
 						</ul>
 					</div>
@@ -25,25 +60,60 @@ class SignUpEntreprenuer1 extends Component {
 						<p className="formFont">Name</p>
 						<div className="col-md-12 col-sm-12 col-xs-12 noLRPadding marginBottom-10">
 							<div className="col-md-6 col-sm-12 col-xs-12 marginBottom-5" >
-								<input type="text" className="form-control" placeholder="First Name"></input>
+								<input
+									type="text"
+									className="form-control"
+									placeholder="First Name"
+									name="signup_details.first_name"
+									required="true"
+									value={this.props.user_info.signup_details.first_name}
+									onChange={this.handleInputChange} />
 							</div>
 							<div className="col-md-6 col-sm-12 col-xs-12 ">
-								<input type="text" className="form-control" placeholder="Last Name"></input>
+								<input
+									type="text"
+									className="form-control"
+									placeholder="Last Name"
+									name="signup_details.last_name"
+								    required="true"
+									value={this.props.user_info.signup_details.last_name}
+									onChange={this.handleInputChange} />
 							</div>
 						</div>
 						<p className="formFont">Enter Email</p>
 						<div className="col-md-12 col-sm-12 col-xs-12 marginBottom-10 ">
-							<input type="email" className="form-control" placeholder="Enter Email"></input>
+							<input
+								type="email"
+								className="form-control"
+								placeholder="Enter Email"
+								name="signup_details.email"
+								required="true"
+								value={this.props.user_info.signup_details.email}
+								onChange={this.handleInputChange}  />
 						</div>
 
 						<div className="col-md-12 col-sm-12 col-xs-12 noLRPadding marginBottom-10 ">
 							<div className="col-md-6 col-sm-12 col-xs-12 marginBottom-5">
 								<p className="formFont noMarginLeft">Enter Password</p>
-								<input type="password" className="form-control" placeholder="Enter Password"></input>
+								<input
+									type="password"
+									className="form-control"
+									placeholder="Enter Password"
+									name="signup_details.password"
+									required="true"
+									value={this.props.user_info.signup_details.password}
+									onChange={this.handleInputChange}  />
 							</div>
 							<div className="col-md-6 col-sm-12 col-xs-12 ">
 								<p className="formFont noMarginLeft">Confirm Password</p>
-								<input type="password" className="form-control" placeholder="Enter Password"></input>
+								<input
+									type="password"
+									className="form-control"
+									placeholder="Enter Password"
+									name="signup_details.password_confirmation"
+									required="true"
+									value={this.props.user_info.signup_details.password_confirmation}
+									onChange={this.handleInputChange}  />
 							</div>
 						</div>
 						<p className="stepFont">OR</p>
@@ -52,7 +122,7 @@ class SignUpEntreprenuer1 extends Component {
 						<button className="btn btn-primary noBorderRadius setButton">SIGN UP WITH LINKEDIN</button>
 						<h6 className="setDesc">We'll never post anything on LinkedIn</h6>
 						<h6 className="setDesc"> without your permission.</h6>
-						<button className="btn btn-success setNext marginTB-25">Next</button>
+						<button onClick={() => this.goToStepTwo()} className="btn btn-success setNext marginTB-25">Next</button>
 					</div>
 				</div>
 			</div>
@@ -60,4 +130,5 @@ class SignUpEntreprenuer1 extends Component {
 	}
 }
 
-export default SignUpEntreprenuer1;
+export default connect(mapStateToProps, mapDispatchToProps,null, {withRef:true})(SignUpEntreprenuer1);
+
