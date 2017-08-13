@@ -91,7 +91,7 @@ class SignUpEntreprenuer2 extends Component {
 							</li>
 						</ul>
 					</div>
-					<div className="col-md-8 col-sm-8 col-xs-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 paddingTop-20 paddingBottom-10">
+					<div className="col-md-8 col-sm-8 col-xs-10 col-xs-offset-1 col-sm-offset-2 col-md-offset-2 paddingTop-20 paddingBottom-10">
 						<p className="formFont">What's your startup's name? (You can change this at any time.)</p>
 						<div className="col-md-12 col-sm-12 col-xs-12 marginBottom-10 ">
 							<input 

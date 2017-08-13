@@ -178,6 +178,13 @@ body {
     margin-left: 25px;
 }
 
+.marginLeft-20 {
+	margin-left: 20px !important;
+}
+
+.marginLeft-50 {
+	margin-left: 50px !important;
+}
 .noBorderRadius {
 	border-radius: 0px !important;
 }
@@ -281,3 +288,6 @@ hr {
 }
 
 
+.displayFlex{
+	display: flex !important;
+}

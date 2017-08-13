@@ -9,6 +9,10 @@ import SignIn from '../pages/signin';
 import SignUpEntreprenuer1 from '../pages/signup_entreprenuer_1';
 import SignUpEntreprenuer2 from '../pages/signup_entreprenuer_2';
 import ForgotPassword from '../pages/forgot_password';
+import SignUpInvester1 from '../pages/signup_invester_1';
+import SignUpInvester2 from '../pages/signup_invester_2';
+import SignUpInvester3 from '../pages/signup_invester_3';
+
 const AppRoutes = {
 	path: '/',
 	component: RootContainer,
@@ -41,6 +45,18 @@ const AppRoutes = {
 		{
 			path: 'signup2',
 			component: SignUpEntreprenuer2
+		},
+		{
+			path: 'signup_invester1',
+			component: SignUpInvester1
+		},
+		{
+			path: 'signup_invester2',
+			component: SignUpInvester2
+		},
+		{
+			path: 'signup_invester3',
+			component: SignUpInvester3
 		},
 		{
 			path: 'signin',

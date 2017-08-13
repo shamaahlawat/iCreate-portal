@@ -126,8 +126,12 @@
 	.setNext{
 		padding-left:45px !important;
 		padding-right:45px !important;
-		border-radius: 100px !important;
-		
+		border-radius: 100px !important;	
+	}
+
+	.setNext:hover{
+		background-color: #ffffff !important;
+		color:#57b751 !important;
 	}
 
 	.setCheckbox {
@@ -155,9 +159,24 @@
 		cursor: pointer !important;
 	}
 	
+	.setReady{
+		border-radius: 120px ;
+	}
+
+	.setReady:hover{
+		background-color: #ffffff !important;
+		color:#57b751 !important;
+	}
+	.addPadding{
+		padding-left: 25px;
+		padding-right: 25px;
+	}
 	@media only screen and (max-width : 767px) {
         .setInfo{
 			text-align: center;
+		}
+		.setMarginLeft{
+			margin-left: 20px !important;
 		}
 	
 	}
@@ -165,6 +184,9 @@
 	@media only screen and (min-width : 768px) {
 		.textFloat{
 			text-align: right !important;
+		}
+		.setMarginLeft{
+			margin-left: 40px !important;
 		}
 	}
 } 

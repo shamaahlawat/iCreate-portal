@@ -3,7 +3,18 @@ import Flexbox from 'flexbox-react';
 import { Accordion, Panel, PageHeader, PanelGroup, ListGroup, ListGroupItem } from 'react-bootstrap';
 import './css/signup.less';
 
+import { browserHistory } from 'react-router';
+
 class SignUp extends Component {
+	constructor(){
+		super();
+	}
+
+	goToSignUp1= () => {
+		console.log('go To sign up 1');
+		browserHistory.push('/signup1');
+	}
+
 	render() {
 		return (
 
@@ -17,7 +28,7 @@ class SignUp extends Component {
 					</div>
 					<div className="col-md-8 col-md-offset-2  col-sm-8 col-sm-offset-2 noLRPadding marginTB bg-color padding-5">
 						<div className="col-md-12 col-sm-12  noLRPadding">
-							<a href="/signup1" className="btn btn-success setButton">I am Entrepreneur</a>
+							<button className="btn btn-success setButton" onClick={this.goToSignUp1}>I am Entrepreneur</button>
 						</div>
 						<div className="col-md-12 col-sm-12 noLRPadding"> 
 							<Accordion className="noMarginBottom">
