@@ -3,6 +3,7 @@ import './css/signup_entreprenuer.less';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as userActions from '../redux/actions/user_action';
+import { browserHistory } from 'react-router';
 
 
 function mapStateToProps(state) {
@@ -35,7 +36,22 @@ class SignIn extends Component {
 		this.setState({
 			rememberPassword: !this.state.rememberPassword
 		})
+	};
+
+	verifyUserSignIn= () => {
+		console.log('next button clicked');
+		console.log(this.props.user_info.signin_details);
+		this.props.actions.signInUser(this.props.user_info.signin_details);
 	}
+
+	goToForgotPassword= () => {
+		browserHistory.push('/forgotpassword');
+	}
+
+	goToSignUp= () => {
+		browserHistory.push('/signup');
+	}
+
 	render() {
 		return (
 
@@ -76,13 +92,24 @@ class SignIn extends Component {
 					</div>
 					<div className="col-md-8 col-sm-8 col-xs-12 col-sm-offset-2 col-md-offset-2  marginTop-10">
 						<div className="col-md-12 textCenter">
-							<button className="btn btn-success setNext marginTB-25">Next</button>
+							<button 
+							    className="btn btn-success setNext marginTB-25"
+								onClick={this.verifyUserSignIn}>
+								Next
+							</button>
 						</div>
 						<div className="col-md-6 col-sm-6 col-xs-12">
-							<p className="setInfo marginBottom-5">Don’t have account?<a href="/signup" className="clickMe"> Click here.</a></p>
+							<p className="setInfo marginBottom-5">
+								Don’t have account?
+								<span className="clickMe" onClick={this.goToSignUp}>
+									 Click here.
+							    </span>
+							</p>
 						</div>
 						<div className="col-md-6 col-sm-6 col-xs-12">
-							<p className="setInfo textFloat marginBottom-5">Forgot Password?</p>
+							<p className="setInfo textFloat cursor marginBottom-5" onClick={this.goToForgotPassword}>
+								Forgot Password?
+							</p>
 						</div>
 					</div>
 				</div>
