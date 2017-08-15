@@ -3,7 +3,13 @@ import './css/signup_entreprenuer.less';
 import { browserHistory } from 'react-router';
 
 class signUpB2B2 extends React.Component {
-	
+	constructor() {
+		super();
+		this.state = {
+			service: false
+		}
+	}
+
 	render() {
 		return (
 			<div className="col-xs-12 col-md -12 col-sm-12 SignUpEntreprenuer" style={{ background: '#f2f2f2' }}>
@@ -17,7 +23,7 @@ class signUpB2B2 extends React.Component {
 							<li>
 								<button onClick={() => browserHistory.push('/signup_b2b1')}>1</button>
 							</li>
-							
+
 							<li className="marginLeft-25">
 								<button className="activated">2</button>
 							</li>
@@ -44,34 +50,34 @@ class signUpB2B2 extends React.Component {
 								className="form-control"
 								placeholder="Enter Company Name" />
 						</div>
-						<div className="col-md-12 col-sm-12 col-xs-12 marginBottom-10 " style={{ background: 'red' }}>
-							<input
-								type="text"
-								className="form-control"
-								placeholder="Linkedin" />
-						</div>
-						<div className="col-md-12 col-sm-12 col-xs-12 marginBottom-20 " style={{ background: 'blue' }}>
-							<input
-								type="text"
-								className="form-control"
-								placeholder="Websites" />
-						</div>
-
+						
 						<p className="formFont">Business Detail  </p>
 						<div className="form-group col-md-12 col-sm-12 col-xs-12 marginBottom-10 ">
-							<textarea 
-							    className="form-control" 
-								rows="4" 
-								id="business_detail" 
+							<textarea
+								className="form-control"
+								rows="4"
+								id="business_detail"
 								placeholder="e.g. Brief detail about your business.">
 							</textarea>
 						</div>
+						<div className="col-md-12 col-sm-12 col-xs-12 displayFlex">
+							<input
+								type="checkbox"
+								name="service"
+								className="marginRight-10"
+								onClick={() => this.setState({ service: !this.state.service })} />
+							<p className="formFont marginBottom-5">I provide services</p>
+						</div>
+						{this.state.service === true &&
+							<div>
+								<p className="marginLeft-15">Select Service You Offer</p>
+							</div>}
 					</div>
 					<div className="col-md-8 col-sm-8 col-xs-12 col-sm-offset-2 col-md-offset-2 textCenter marginTB-25">
 						<button
 							className="btn btn-success setReady"
 							onClick={() => browserHistory.push('/signup_b2b1')}>
-							    Previous
+							Previous
 						</button>
 						<button className="btn btn-success marginLeft-20 setReady">Ready to go</button>
 					</div>

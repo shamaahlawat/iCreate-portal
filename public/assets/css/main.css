@@ -140,7 +140,7 @@ body {
 }
 
 .marginBottom-5 {
-	margin-bottom: 5px;
+	margin-bottom: 5px !important;
 }
 .marginBottom-10{
 	margin-bottom: 10px !important;
@@ -159,7 +159,7 @@ body {
 }
 
 .marginTop-10 {
-	margin-top: 10px;
+	margin-top: 10px !important;
 }
 
 .marginTop-12{

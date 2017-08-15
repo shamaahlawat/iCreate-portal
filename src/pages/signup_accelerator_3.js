@@ -7,7 +7,7 @@ class signUpAccelerator3 extends React.Component {
 	constructor() {
 		super();
 		this.selectLocation = this.selectLocation.bind(this);
-		
+
 	}
 
 	selectLocation = () => {
@@ -74,7 +74,7 @@ class signUpAccelerator3 extends React.Component {
 								onPlaceSelected={(place) => this.selectLocation(place)}
 								types={['(regions)']} />
 						</div>
-						
+
 						<p className="formFont">About this program  </p>
 						<div className="form-group col-md-12 col-sm-12 col-xs-12 marginBottom-10 ">
 							<textarea
@@ -108,7 +108,7 @@ class signUpAccelerator3 extends React.Component {
 						<button
 							className="btn btn-success setReady"
 							onClick={() => browserHistory.push('/signup_accelerator2')}>
-							   Previous
+							Previous
 						</button>
 						<button
 							className="btn btn-success marginLeft-20 setReady ">
