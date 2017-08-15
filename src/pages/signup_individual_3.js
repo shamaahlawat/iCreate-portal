@@ -1,22 +1,25 @@
 import React from 'react';
 import './css/signup_entreprenuer.less';
+import { browserHistory } from 'react-router';
 
-class signUpInvester3 extends React.Component {
+class signUpIndividual3 extends React.Component {
+
+
 	render() {
 		return (
 			<div className="col-xs-12 col-md -12 col-sm-12 SignUpEntreprenuer" style={{ background: '#f2f2f2' }}>
 				<div className="col-md-8 col-sm-10 col-xs-12 col-sm-offset-1 col-md-offset-2 contentHolder">
 					<div className="col-md-12 col-sm-12 col-xs-12 heading" >
-						<p className="setHeader">Sign Up as Investor</p>
+						<p className="setHeader">Sign Up as Individual Investor</p>
 					</div>
 					<div className="col-md-12 col-sm-12 col-xs-12">
 						<p className="stepFont">Step</p>
 						<ul className="step noLRPadding">
 							<li>
-								<button >1</button>
+								<button onClick={() => browserHistory.push('/signup_individual1')}>1</button>
 							</li>
 							<li className="marginLeft-25">
-								<button>2</button>
+								<button onClick={() => browserHistory.push('/signup_individual2')}>2</button>
 							</li>
 							<li className="marginLeft-25">
 								<button className="activated">3</button>
@@ -24,7 +27,7 @@ class signUpInvester3 extends React.Component {
 						</ul>
 					</div>
 					<div className="col-md-8 col-sm-8 col-xs-10 col-xs-offset-1 col-sm-offset-2 col-md-offset-2 paddingTop-20 paddingBottom-10">
-						<p className="formFont">Which industry start up you want to inverst? </p>
+						<p className="formFont">Which industry start up you want to invest? </p>
 						<div className="form-group col-md-12 col-sm-12 col-xs-12 marginBottom-10 ">
 							<select
 								className="form-control"
@@ -82,8 +85,12 @@ class signUpInvester3 extends React.Component {
 							</label>
 						</div>
 					</div>
-					<div className="col-md-8 col-sm-8 col-xs-12 col-sm-offset-2 col-md-offset-2 textCenter marginTB-25">		
-						<button className="btn btn-success setReady">Previous</button>
+					<div className="col-md-8 col-sm-8 col-xs-12 col-sm-offset-2 col-md-offset-2 textCenter marginTB-25">
+						<button
+							className="btn btn-success setReady"
+							onClick={() => browserHistory.push('/signup_individual2')}>
+							Previous
+						</button>
 						<button className="btn btn-success marginLeft-20 setReady">Ready to go</button>
 					</div>
 				</div>
@@ -93,4 +100,4 @@ class signUpInvester3 extends React.Component {
 	}
 }
 
-export default signUpInvester3;
+export default signUpIndividual3;

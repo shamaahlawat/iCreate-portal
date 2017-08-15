@@ -6,15 +6,7 @@ import './css/signup.less';
 import { browserHistory } from 'react-router';
 
 class SignUp extends Component {
-	constructor(){
-		super();
-	}
-
-	goToSignUp1= () => {
-		console.log('go To sign up 1');
-		browserHistory.push('/signup1');
-	}
-
+	
 	render() {
 		return (
 
@@ -28,7 +20,11 @@ class SignUp extends Component {
 					</div>
 					<div className="col-md-8 col-md-offset-2  col-sm-8 col-sm-offset-2 noLRPadding marginTB bg-color padding-5">
 						<div className="col-md-12 col-sm-12  noLRPadding">
-							<button className="btn btn-success setButton" onClick={this.goToSignUp1}>I am Entrepreneur</button>
+							<button 
+							   className="btn btn-success setButton" 
+							   onClick={() => browserHistory.push('/signup1')}>
+							      I am Entrepreneur
+							</button>
 						</div>
 						<div className="col-md-12 col-sm-12 noLRPadding"> 
 							<Accordion className="noMarginBottom">
@@ -36,18 +32,38 @@ class SignUp extends Component {
 									<div className="setRoleFont">I am an Investor</div>
 								} eventKey="2" className="textCenter noMarginTop">
 									<ListGroup>
-										<ListGroupItem href="#">I belong to Investment Organization</ListGroupItem>
-										<ListGroupItem href="#">I manage an Acceletor Program</ListGroupItem>
-										<ListGroupItem href="#">I am an Individual Investor</ListGroupItem>
+										<ListGroupItem 
+										    className="textCenter"
+											onClick={() => browserHistory.push('/signup_investor1')}>
+											    I belong to Investment Organization
+										</ListGroupItem>
+										<ListGroupItem 
+										    className="textCenter"
+											onClick={()=>browserHistory.push('/signup_accelerator1')}>
+										        I manage an Accelerator Program
+											</ListGroupItem>
+										<ListGroupItem 
+										    className="textCenter"
+											onClick={() => browserHistory.push('/signup_individual1')}>
+											    I am an Individual Investor
+										</ListGroupItem>
 									</ListGroup>
 								</Panel>
 							</Accordion>
 						</div>
 						<div className="col-md-12 col-sm-12 noLRPadding marginBottom-1">
-							<a href="/signup1" className="btn btn-success setButton">I am looking for a job in startup</a>
+							<button 
+							    className="btn btn-success setButton" 
+								onClick={() => browserHistory.push('/signup_jobseeker1')}>
+								    I am looking for a job in startup
+							</button>
 						</div>
 						<div className="col-md-12 col-sm-12 noLRPadding">
-							<a href="/signup1" className="btn btn-success setButton">I provide B2B solutions</a>
+							<button 
+							    className="btn btn-success setButton" 
+								onClick={() => browserHistory.push('/signup_b2b1')}>
+								    I provide B2B solutions
+							</button>
 						</div>
 					</div>
 				</div>

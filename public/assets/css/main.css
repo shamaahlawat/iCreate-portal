@@ -154,6 +154,10 @@ body {
 	margin-bottom: 20px !important;
 }
 
+.marginTop-5{
+	margin-top: 5px !important;
+}
+
 .marginTop-10 {
 	margin-top: 10px;
 }
@@ -165,8 +169,21 @@ body {
 .marginTop-20{
 	margin-top: 20px !important;
 }
+
 .marginTop-25 {
-	margin-top: 25px;
+	margin-top: 25px !important;
+}
+
+.marginTop-30{
+   margin-top: 30px !important;
+}
+
+.marginTop-40{
+	margin-top: 40px !important;
+}
+
+.marginTop-50{
+	margin-top: 50px !important;
 }
 
 .marginTB-25{
@@ -175,11 +192,19 @@ body {
 }
 
 .marginLeft-25 {
-    margin-left: 25px;
+    margin-left: 25px !important;
 }
 
 .marginLeft-20 {
 	margin-left: 20px !important;
+}
+
+.marginLeft-15{
+	margin-left:15px !important;
+}
+
+.marginRight-10 {
+	margin-right: 10px !important;
 }
 
 .marginLeft-50 {

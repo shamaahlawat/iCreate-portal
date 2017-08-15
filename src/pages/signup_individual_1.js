@@ -1,53 +1,31 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import {bindActionCreators} from 'redux';
+import React from 'react';
 import './css/signup_entreprenuer.less';
-
-import * as userActions from '../redux/actions/user_action';
 import { browserHistory } from 'react-router';
 
-var dotProp = require('dot-prop-immutable');
-
-function mapDispatchToProps(dispatch) {
-	return {
-		actions: bindActionCreators(Object.assign({}, userActions), dispatch)
-	};
-};
-
-function mapStateToProps(state) {
-	return {
-		user_info: state.user_details
-	};
-};
-
-class SignUpEntreprenuer1 extends Component {
-	constructor(){
+class SignUpIndividual1 extends React.Component {
+	constructor() {
 		super();
-		this.handleInputChange=this.handleInputChange.bind(this);
 	}
 
-	handleInputChange = (event) => {
-		// console.log(event.target.name);
-		// console.log(event.target.value);
-		this.props.actions.updateUserDetails(event.target.name, event.target.value);
-	};
 
 	render() {
 		return (
-
 			<div className="col-xs-12 col-md -12 col-sm-12 SignUpEntreprenuer" style={{ background: '#f2f2f2' }}>
 				<div className="col-md-8 col-sm-10 col-xs-12 col-sm-offset-1 col-md-offset-2 contentHolder">
 					<div className="col-md-12 col-sm-12 col-xs-12 heading">
-						<p className="setHeader">Sign Up as Entreprenuer</p>
+						<p className="setHeader">Sign Up as Individual Invesor</p>
 					</div>
 					<div className="col-md-12 col-sm-12 col-xs-12">
 						<p className="stepFont">Step</p>
 						<ul className="step noLRPadding">
 							<li>
-								<button  className="activated" >1</button>
+								<button className="activated" >1</button>
 							</li>
 							<li className="marginLeft-25">
-								<button onClick={() => browserHistory.push('/signup2')} >2</button>
+								<button onClick={() => browserHistory.push('/signup_individual2')}>2</button>
+							</li>
+							<li className="marginLeft-25">
+								<button onClick={() => browserHistory.push('/signup_individual3')}>3</button>
 							</li>
 						</ul>
 					</div>
@@ -58,21 +36,13 @@ class SignUpEntreprenuer1 extends Component {
 								<input
 									type="text"
 									className="form-control"
-									placeholder="First Name"
-									name="signup_details.first_name"
-									required="true"
-									value={this.props.user_info.signup_details.first_name}
-									onChange={this.handleInputChange} />
+									placeholder="First Name" />
 							</div>
 							<div className="col-md-6 col-sm-6 col-xs-12 ">
 								<input
 									type="text"
 									className="form-control"
-									placeholder="Last Name"
-									name="signup_details.last_name"
-								    required="true"
-									value={this.props.user_info.signup_details.last_name}
-									onChange={this.handleInputChange} />
+									placeholder="Last Name" />
 							</div>
 						</div>
 						<p className="formFont">Enter Email</p>
@@ -80,11 +50,7 @@ class SignUpEntreprenuer1 extends Component {
 							<input
 								type="email"
 								className="form-control"
-								placeholder="Enter Email"
-								name="signup_details.email"
-								required="true"
-								value={this.props.user_info.signup_details.email}
-								onChange={this.handleInputChange}  />
+								placeholder="Enter Email" />
 						</div>
 
 						<div className="col-md-12 col-sm-12 col-xs-12 noLRPadding marginBottom-10 ">
@@ -93,22 +59,15 @@ class SignUpEntreprenuer1 extends Component {
 								<input
 									type="password"
 									className="form-control"
-									placeholder="Enter Password"
-									name="signup_details.password"
-									required="true"
-									value={this.props.user_info.signup_details.password}
-									onChange={this.handleInputChange}  />
+									placeholder="Enter Password" />
 							</div>
 							<div className="col-md-6 col-sm-6 col-xs-12 ">
 								<p className="formFont noMarginLeft">Confirm Password</p>
 								<input
 									type="password"
 									className="form-control"
-									placeholder="Enter Password"
-									name="signup_details.password_confirmation"
-									required="true"
-									value={this.props.user_info.signup_details.password_confirmation}
-									onChange={this.handleInputChange}  />
+									placeholder="Enter Password" />
+
 							</div>
 						</div>
 						<p className="stepFont">OR</p>
@@ -117,13 +76,16 @@ class SignUpEntreprenuer1 extends Component {
 						<button className="btn btn-primary noBorderRadius setButton">SIGN UP WITH LINKEDIN</button>
 						<h6 className="setDesc">We'll never post anything on LinkedIn</h6>
 						<h6 className="setDesc"> without your permission.</h6>
-						<button onClick={() => browserHistory.push('/signup2')} className="btn btn-success setNext marginTB-25">Next</button>
+						<button
+							className="btn btn-success setNext marginTB-25"
+							onClick={() => browserHistory.push('/signup_individual2')}>
+							    Next
+						</button>
 					</div>
 				</div>
 			</div>
-		)
+		);
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps,null, {withRef:true})(SignUpEntreprenuer1);
-
+export default SignUpIndividual1;

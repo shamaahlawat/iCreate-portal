@@ -15,17 +15,22 @@ export function updateUserDetails(path, data) {
 
 export function signUpUser(data) {
 	return function (dispatch) {
-		API.userSignUp(data, (err, res) => {
-			console.log(err);
-			if (!err) {
-				console.log('no error in sign up');
+		console.log('signUpUser action called');
+		API.userSignUp(data,function (err, res){
+			if (!err){
+				console.log('no error');
+				console.log(res);
 				dispatch({
-					type: actionTypes.SIGNUP_SUCCESS
-				})
-			} else {
+					type: actionTypes.SIGNUP_SUCCESS,
+					response: res
+				});
+			}
+			else{
+				console.log(' error found');
 				dispatch({
-					type: actionTypes.SIGNUP_ERROR
-				})
+					type: actionTypes.SIGNUP_ERROR,
+					error:err
+				});
 			}
 		});
 	}

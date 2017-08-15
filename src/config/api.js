@@ -52,5 +52,6 @@ exports.userSignIn = (data, callback) => {
 }
 
 exports.userSignUp = (data, callback) => {
-	fetchDataAndProceed('/users', method_types.post, data, callback)
+	console.log('userSignUp function called');
+	fetchDataAndProceed('/users.json', method_types.post, data, callback)
 }

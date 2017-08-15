@@ -22,8 +22,6 @@ function mapDispatchToProps(dispatch) {
 
 
 
-
-
 class SignUpEntreprenuer2 extends Component {
 	constructor(){
 		super();
@@ -68,10 +66,6 @@ class SignUpEntreprenuer2 extends Component {
 		this.props.actions.signUpUser(this.props.user_info.signup_details);
 	};
 
-	goToStepOne = () => {
-		browserHistory.push('/signup1');
-	};
-
 	render() {
 		return (
 
@@ -84,7 +78,7 @@ class SignUpEntreprenuer2 extends Component {
 						<p className="stepFont">Step</p>
 						<ul className="step noLRPadding">
 							<li>
-								<button onClick={() => this.goToStepOne()} >1</button>
+								<button onClick={() => browserHistory.push('/signup1')}>1</button>
 							</li>
 							<li className="marginLeft-25">
 								<button className="activated">2</button>
