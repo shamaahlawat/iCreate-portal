@@ -37,10 +37,13 @@ export const initialStates = {
 		signin_details:{
 			email:"",
 			password:""
-		}
+		},
+		is_login:false
 	},
+
 
 	count_details: {
 		current_count: 0
 	}
+
 };

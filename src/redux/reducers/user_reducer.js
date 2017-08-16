@@ -16,8 +16,12 @@ export default function user_details(state = initialStates.user_details, action)
 			};
 				
 		case actionTypes.SIGNUP_ERROR:
-		     return ;	
-		
+			 return ;
+		case actionTypes.SIGNIN_SUCCESS:
+			 console.log('signin reducer called');
+		     console.log(action.response);
+			 localStorage.setItem('signin_details',JSON.stringify(action.response));
+			 return;		
  		default:
 			return state;
 	}

@@ -48,7 +48,7 @@ function fetchDataAndProceed(url, method, data, callback) {
 
 //user apis
 exports.userSignIn = (data, callback) => {
-	fetchDataAndProceed('/users/signin', method_types.post, data, callback)
+	fetchDataAndProceed('/users/sign_in.json', method_types.post, data, callback)
 }
 
 exports.userSignUp = (data, callback) => {

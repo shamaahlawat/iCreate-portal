@@ -23,6 +23,7 @@ class SignIn extends Component {
 		super();
 		this.handleInputChange=this.handleInputChange.bind(this);
 		this.setRememberPassword=this.setRememberPassword.bind(this);
+		this.verifyUserSignIn=this.verifyUserSignIn.bind(this);
 		this.state={
 			rememberPassword: false
 		}

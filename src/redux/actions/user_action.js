@@ -38,12 +38,17 @@ export function signUpUser(data) {
 
 export function signInUser(data) {
 	return function (dispatch) {
+		console.log('signInUser action called');
 		API.userSignIn(data, function (err, res) {
 			if (!err) {
+				console.log('no error');
 				dispatch({
-					type: actionTypes.SIGNIN_SUCCESS
+					type: actionTypes.SIGNIN_SUCCESS,
+					response:res
 				})
 			} else {
+				console.log(' error found');
+				console.log(err);
 				dispatch({
 					type: actionTypes.SIGNIN_ERROR
 				})

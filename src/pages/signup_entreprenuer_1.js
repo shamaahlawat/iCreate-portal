@@ -27,8 +27,6 @@ class SignUpEntreprenuer1 extends Component {
 	}
 
 	handleInputChange = (event) => {
-		// console.log(event.target.name);
-		// console.log(event.target.value);
 		this.props.actions.updateUserDetails(event.target.name, event.target.value);
 	};
 
@@ -125,5 +123,5 @@ class SignUpEntreprenuer1 extends Component {
 	}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps,null, {withRef:true})(SignUpEntreprenuer1);
+export default connect(mapStateToProps, mapDispatchToProps, null, {withRef:true})(SignUpEntreprenuer1);
 
