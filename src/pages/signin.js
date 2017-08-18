@@ -3,6 +3,7 @@ import './css/signup_entreprenuer.less';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as userActions from '../redux/actions/user_action';
+import * as pageActions from '../redux/actions/page_actions';
 import { browserHistory } from 'react-router';
 
 
@@ -14,7 +15,8 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
 	return {
-		actions: bindActionCreators(Object.assign({}, userActions), dispatch)
+		actions: bindActionCreators(Object.assign({}, userActions), dispatch),
+		page_actions: bindActionCreators(Object.assign({}, pageActions), dispatch)
 	};
 };
 
@@ -27,6 +29,10 @@ class SignIn extends Component {
 		this.state={
 			rememberPassword: false
 		}
+	}
+
+	componentWillMount() {
+		this.props.page_actions.pageChanged('signin');
 	}
 
 	handleInputChange = (event) => {

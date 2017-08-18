@@ -10,17 +10,13 @@ import './css/app_header.less';
 
 function mapStateToProps(state) {
 	return {
-		user_info: state.user_details
+		user_info: state.user_details,
+		current_page: state.page_details.current_page
 	};
 };
 
 class AppHeader extends Component {
-    constructor(){
-		super();
-	}
-	signOutUser =() => {
-          console.log('signout button clicked')
-	}
+
 	render() {
 		return (
 			<Flexbox flexDirection="row" minWidth="100vw" className="AppHeader marginBottom-2 simple from-right transition-item">
@@ -43,14 +39,14 @@ class AppHeader extends Component {
 								{this.props.user_info.is_login === false &&
 								<NavItem
 										eventKey={2}
-										className="nav-height custom"
+										className= {"nav-height custom "+ (this.props.current_page === 'signin' ? "active":"")}
 										onClick={() => browserHistory.push('/signin')}>
 										Sign In
 								</NavItem>}
 								{this.props.user_info.is_login === false &&
 								<NavItem
 										eventKey={3}
-										className="nav-height custom"
+										className={"nav-height custom"+ (this.props.current_page === 'signup' ? " active":"")}
 										onClick={() => browserHistory.push('/signup')}>
 										Sign Up
 								</NavItem>}
@@ -79,12 +75,13 @@ class AppHeader extends Component {
 										<NavLink withLi to="/page2/b"><span className="glyphicon glyphicon-cog"></span> Setting</NavLink>
 										<NavLink withLi to="/page2/c"><span className="glyphicon glyphicon-earphone"></span> Contact Us</NavLink>
 										<NavLink 
-										    withLi
-											className="setcursor" 
-											onClick={()=>{console.log('signout button clicked')}}>
+										    withLi 
+											className="setcursor"
+											onClick={()=>console.log('signout button clicked')}>
 											<span className="glyphicon glyphicon-log-out"></span> Sign Out
 										</NavLink>
-									</NavDropdown>}
+									</NavDropdown>
+								}
 							</Nav>
 						</Navbar.Collapse>
 					</div>

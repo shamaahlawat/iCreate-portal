@@ -1,12 +1,26 @@
 import React, { Component } from 'react';
-import Flexbox from 'flexbox-react';
+// import Flexbox from 'flexbox-react';
 import { Accordion, Panel, PageHeader, PanelGroup, ListGroup, ListGroupItem } from 'react-bootstrap';
 import './css/signup.less';
 
 import { browserHistory } from 'react-router';
+import * as pageActions from '../redux/actions/page_actions';
+import {connect} from 'react-redux';
+import{bindActionCreators} from 'redux';
+
+
+function mapDispatchToProps(dispatch) {
+	return {
+		actions: bindActionCreators(Object.assign({}, pageActions), dispatch)
+	};
+};
 
 class SignUp extends Component {
 	
+	componentWillMount(){
+	 this.props.actions.pageChanged('signup');
+	}
+
 	render() {
 		return (
 
@@ -72,4 +86,4 @@ class SignUp extends Component {
 	}
 }
 
-export default SignUp;
+export default connect(null, mapDispatchToProps, null, { withRef: true })(SignUp);

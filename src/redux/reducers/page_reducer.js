@@ -24,8 +24,7 @@ export default function page_details(state = initialStates.page_details, action)
 		case actionTypes.PAGE_CHANGED:
 			return {
 				...state,
-				current_page: action.payload.current_page,
-				page_title: action.payload.page_title,
+				current_page: action.payload,
 				page_load_error: false
 			};
 

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import './css/signup_entreprenuer.less';
-
 import * as userActions from '../redux/actions/user_action';
 import { browserHistory } from 'react-router';
 
