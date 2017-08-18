@@ -1,5 +1,6 @@
 import actionTypes from '../action_types';
 import * as API from '../../config/api';
+import {browserHistory} from 'react-router';
 
 
 export function updateUserDetails(path, data) {
@@ -20,6 +21,7 @@ export function signUpUser(data) {
 			if (!err){
 				console.log('no error');
 				console.log(res);
+				browserHistory.push('/signin');
 				dispatch({
 					type: actionTypes.SIGNUP_SUCCESS,
 					response: res
@@ -42,6 +44,7 @@ export function signInUser(data) {
 		API.userSignIn(data, function (err, res) {
 			if (!err) {
 				console.log('no error');
+				browserHistory.push('/entreprenuer_home');
 				dispatch({
 					type: actionTypes.SIGNIN_SUCCESS,
 					response:res
@@ -50,7 +53,8 @@ export function signInUser(data) {
 				console.log(' error found');
 				console.log(err);
 				dispatch({
-					type: actionTypes.SIGNIN_ERROR
+					type: actionTypes.SIGNIN_ERROR,
+					error: err
 				})
 			}
 		})

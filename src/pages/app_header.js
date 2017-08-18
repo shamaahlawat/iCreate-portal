@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import Flexbox from 'flexbox-react';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, NavDropdown } from 'react-bootstrap';
 import { connect } from 'react-redux';
 
 import NavLink from './components/_navlinks.js';
@@ -15,7 +15,12 @@ function mapStateToProps(state) {
 };
 
 class AppHeader extends Component {
-
+    constructor(){
+		super();
+	}
+	signOutUser =() => {
+          console.log('signout button clicked')
+	}
 	render() {
 		return (
 			<Flexbox flexDirection="row" minWidth="100vw" className="AppHeader marginBottom-2 simple from-right transition-item">
@@ -67,13 +72,18 @@ class AppHeader extends Component {
 								{this.props.user_info.is_login === true &&
 									<NavDropdown 
 									    eventKey={6} 
-										title={<span><img src="../assets/images/icon_3.png" alt="profile pic" className="img-resposive img-circle set-profile-pic" /> Vivek</span>} 
+										title={<span><img src="../assets/images/icon_3.png" alt="profile pic" className="img-resposive img-circle set-profile-pic" /> { this.props.user_info.user.first_name }</span>} 
 									    id="dropdown1" 
 										className="nav-height setDropdown">   {/*add first name only (ex- fName = Vivek) otherwise hovering will push all the item left*/}
 										<NavLink withLi to="/page2/a"><span className="glyphicon glyphicon-user"></span> Profile</NavLink>
 										<NavLink withLi to="/page2/b"><span className="glyphicon glyphicon-cog"></span> Setting</NavLink>
 										<NavLink withLi to="/page2/c"><span className="glyphicon glyphicon-earphone"></span> Contact Us</NavLink>
-										<NavLink withLi to="/page2/d"><span className="glyphicon glyphicon-log-out"></span> Sign Out</NavLink>
+										<NavLink 
+										    withLi
+											className="setcursor" 
+											onClick={()=>{console.log('signout button clicked')}}>
+											<span className="glyphicon glyphicon-log-out"></span> Sign Out
+										</NavLink>
 									</NavDropdown>}
 							</Nav>
 						</Navbar.Collapse>

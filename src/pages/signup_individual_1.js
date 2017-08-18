@@ -13,7 +13,7 @@ class SignUpIndividual1 extends React.Component {
 			<div className="col-xs-12 col-md -12 col-sm-12 SignUpEntreprenuer" style={{ background: '#f2f2f2' }}>
 				<div className="col-md-8 col-sm-10 col-xs-12 col-sm-offset-1 col-md-offset-2 contentHolder">
 					<div className="col-md-12 col-sm-12 col-xs-12 heading">
-						<p className="setHeader">Sign Up as Individual Invesor</p>
+						<p className="setHeader">Sign Up as Individual Investor</p>
 					</div>
 					<div className="col-md-12 col-sm-12 col-xs-12">
 						<p className="stepFont">Step</p>
