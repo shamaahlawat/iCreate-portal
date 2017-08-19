@@ -1,10 +1,7 @@
 import React from 'react';
 import './css/signup_entreprenuer.less';
-// import { Radio } from 'react-bootstrap';
-// import Autocomplete from 'react-google-autocomplete';
 import Trust from './components/investor_trust';
 import Firm from './components/investor_firm';
-// import If from './components/_if_component';
 import { browserHistory } from 'react-router';
 
 class signUpInvestor2 extends React.Component {

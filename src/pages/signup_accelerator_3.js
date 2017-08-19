@@ -11,7 +11,7 @@ class signUpAccelerator3 extends React.Component {
 	}
 
 	selectLocation = () => {
-		console.log('select location function called');
+		
 	};
 
 	render() {

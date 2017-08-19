@@ -15,47 +15,44 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
 	return {
-		actions: bindActionCreators(Object.assign({}, userActions), dispatch),
-		page_actions: bindActionCreators(Object.assign({}, pageActions), dispatch)
+		actions: bindActionCreators(Object.assign({}, userActions, pageActions), dispatch)
 	};
 };
 
 class SignIn extends Component {
-	constructor(){
+	constructor() {
 		super();
-		this.handleInputChange=this.handleInputChange.bind(this);
-		this.setRememberPassword=this.setRememberPassword.bind(this);
-		this.verifyUserSignIn=this.verifyUserSignIn.bind(this);
-		this.state={
+		this.handleInputChange = this.handleInputChange.bind(this);
+		this.setRememberPassword = this.setRememberPassword.bind(this);
+		this.verifyUserSignIn = this.verifyUserSignIn.bind(this);
+		this.state = {
 			rememberPassword: false
 		}
 	}
 
 	componentWillMount() {
-		this.props.page_actions.pageChanged('signin');
+		this.props.actions.pageChanged('signin');
 	}
 
 	handleInputChange = (event) => {
 		this.props.actions.updateUserDetails(event.target.name, event.target.value);
 	};
 
-	setRememberPassword= () =>{
+	setRememberPassword = () => {
 		this.setState({
 			rememberPassword: !this.state.rememberPassword
 		})
 	};
 
-	verifyUserSignIn= () => {
-		console.log('next button clicked');
-		console.log(this.props.user_info.signin_details);
+	verifyUserSignIn = () => {
 		this.props.actions.signInUser(this.props.user_info.signin_details);
 	}
 
-	goToForgotPassword= () => {
+	goToForgotPassword = () => {
 		browserHistory.push('/forgotpassword');
 	}
 
-	goToSignUp= () => {
+	goToSignUp = () => {
 		browserHistory.push('/signup');
 	}
 
@@ -71,24 +68,24 @@ class SignIn extends Component {
 					<div className="col-md-8 col-sm-8 col-xs-8 col-xs-offset-2 col-sm-offset-2 col-md-offset-2 paddingTop-20 paddingBottom-10">
 						<p className="formFont">Enter Email</p>
 						<div className="col-md-12 col-sm-12 col-xs-12 marginBottom-10 ">
-							<input 
-							   type="email" 
-							   className="form-control" 
-							   placeholder="Enter registered email"
-							   value={this.props.user_info.signin_details.email}
-							   name="signin_details.email" 
-							   onChange={this.handleInputChange} />
+							<input
+								type="email"
+								className="form-control"
+								placeholder="Enter registered email"
+								value={this.props.user_info.signin_details.email}
+								name="signin_details.email"
+								onChange={this.handleInputChange} />
 						</div>
 						<p className="formFont">Enter Password</p>
 						<div className="col-md-12 col-sm-12 col-xs-12 marginBottom-10 ">
-							<input 
-							   type="password"
-							   name="password" 
-							   className="form-control" 
-							   placeholder="Enter password"
-							   value={this.props.user_info.signin_details.password}
-							   name="signin_details.password"
-							   onChange={this.handleInputChange} />
+							<input
+								type="password"
+								name="password"
+								className="form-control"
+								placeholder="Enter password"
+								value={this.props.user_info.signin_details.password}
+								name="signin_details.password"
+								onChange={this.handleInputChange} />
 						</div>
 						<div className="checkbox col-md-12 col-sm-12 col-xs-12 marginBottom-10">
 							<label className="setCheckbox">
@@ -99,8 +96,8 @@ class SignIn extends Component {
 					</div>
 					<div className="col-md-8 col-sm-8 col-xs-12 col-sm-offset-2 col-md-offset-2  marginTop-10">
 						<div className="col-md-12 textCenter">
-							<button 
-							    className="btn btn-success setNext marginTB-25"
+							<button
+								className="btn btn-success setNext marginTB-25"
 								onClick={this.verifyUserSignIn}>
 								Next
 							</button>
@@ -109,7 +106,7 @@ class SignIn extends Component {
 							<p className="setInfo marginBottom-5">
 								Don’t have account?
 								<span className="clickMe" onClick={this.goToSignUp}>
-									 Click here.
+									Click here.
 							    </span>
 							</p>
 						</div>

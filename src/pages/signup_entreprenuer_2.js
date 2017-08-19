@@ -19,40 +19,29 @@ function mapDispatchToProps(dispatch) {
 	};
 };
 
-
-
-
 class SignUpEntreprenuer2 extends Component {
-	constructor(){
+	constructor() {
 		super();
-		this.handleInputChange=this.handleInputChange.bind(this);
-		// this.setSelectedText=this.setSelectedText.bind(this);
-		this.signup_complete=this.signup_complete.bind(this);
-		this.setAgreement=this.setAgreement.bind(this);
-		this.state={
+		this.handleInputChange = this.handleInputChange.bind(this);
+		this.signup_complete = this.signup_complete.bind(this);
+		this.setAgreement = this.setAgreement.bind(this);
+		this.state = {
 			setTermsAndAgreement: false
 		}
 	}
 
 	setAgreement = () => {
-         this.setState({
-              setTermsAndAgreement: !this.state.setTermsAndAgreement
-		 });
-		//  console.log(this.state.setTermsAndAgreement);
+		this.setState({
+			setTermsAndAgreement: !this.state.setTermsAndAgreement
+		});
 	}
 
 	handleInputChange = (event) => {
 		this.props.actions.updateUserDetails(event.target.name, event.target.value);
 	};
 
-	// setSelectedText = (event) => {
-	// 	console.log('setSelectedText function called');
-	// 	console.log(event.target.name);
-	// 	console.log(event.target.value);
-	// };
-
 	selectLocation = (place) => {
-		var location ={
+		var location = {
 			name: place.name,
 			latitude: place.geometry.location.lat(),
 			logitude: place.geometry.location.lng()
@@ -61,8 +50,6 @@ class SignUpEntreprenuer2 extends Component {
 	};
 
 	signup_complete = () => {
-		// console.log("signup form filled");
-		// console.log(this.props.user_info.signup_details);
 		this.props.actions.signUpUser(this.props.user_info.signup_details);
 	};
 
@@ -88,9 +75,9 @@ class SignUpEntreprenuer2 extends Component {
 					<div className="col-md-8 col-sm-8 col-xs-10 col-xs-offset-1 col-sm-offset-2 col-md-offset-2 paddingTop-20 paddingBottom-10">
 						<p className="formFont">What's your startup's name? (You can change this at any time.)</p>
 						<div className="col-md-12 col-sm-12 col-xs-12 marginBottom-10 ">
-							<input 
-							    type="text"
-								className="form-control" 
+							<input
+								type="text"
+								className="form-control"
 								placeholder="Enter Name"
 								name="signup_details.company_details.name"
 								value={this.props.user_info.signup_details.company_details.name}
@@ -98,27 +85,27 @@ class SignUpEntreprenuer2 extends Component {
 						</div>
 						<p className="formFont">Is your startup incorporated? </p>
 						<div className="form-group col-md-12 col-sm-12 col-xs-12 marginBottom-10 ">
-							<select 
-							   className="form-control"
-							   id="sel1" 
-							   name="signup_details.company_details.incorporation_type" 
-							   value={this.props.user_info.signup_details.incorporation_type}
-							   onChange={this.handleInputChange} placeholder="PLease select">
-										<option value="">Please select</option>
-										<option value='Other'>Other</option>
-										<option value='C-corp'>C-corp</option>
-										<option value='S-corp'>S-corp</option>
-										<option value='B-corp'>B-corp</option>
-										<option value='LLC'>LLC</option>
+							<select
+								className="form-control"
+								id="sel1"
+								name="signup_details.company_details.incorporation_type"
+								value={this.props.user_info.signup_details.incorporation_type}
+								onChange={this.handleInputChange} placeholder="PLease select">
+								<option value="">Please select</option>
+								<option value='Other'>Other</option>
+								<option value='C-corp'>C-corp</option>
+								<option value='S-corp'>S-corp</option>
+								<option value='B-corp'>B-corp</option>
+								<option value='LLC'>LLC</option>
 							</select>
 						</div>
 						<p className="formFont">Where is your startup located?
 							(Please indicate the city your startup is located in.)  </p>
 						<div className="form-group col-md-12 col-sm-12 col-xs-12 marginBottom-10 ">
-							<Autocomplete 
-							    className="form-control"  
-								onPlaceSelected={(place) => this.selectLocation(place)} 
-								types={['(regions)']}/>
+							<Autocomplete
+								className="form-control"
+								onPlaceSelected={(place) => this.selectLocation(place)}
+								types={['(regions)']} />
 						</div>
 						<div className="checkbox col-md-12 col-sm-12 col-xs-12 marginBottom-10">
 							<label className="setCheckbox">
@@ -129,8 +116,8 @@ class SignUpEntreprenuer2 extends Component {
 						</div>
 					</div>
 					<div className="col-md-8 col-sm-8 col-xs-12 col-sm-offset-2 col-md-offset-2 textCenter marginTop-10">
-						<button  
-						    className="btn btn-success setNext marginTB-25"
+						<button
+							className="btn btn-success setNext marginTB-25"
 							onClick={this.signup_complete}>Next</button>
 					</div>
 				</div>

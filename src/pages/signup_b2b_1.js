@@ -11,10 +11,9 @@ class SignUpB2B1 extends React.Component {
 	}
 
 	selectLocation = (place) => {
-		console.log('selectlocation function called');
+		
 	};
 
-	
 	render() {
 		return (
 			<div className="col-xs-12 col-md -12 col-sm-12 SignUpEntreprenuer" style={{ background: '#f2f2f2' }}>

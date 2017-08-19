@@ -3,10 +3,6 @@ import './css/signup_entreprenuer.less';
 import { browserHistory } from 'react-router';
 
 class SignUpIndividual1 extends React.Component {
-	constructor() {
-		super();
-	}
-
 
 	render() {
 		return (
@@ -79,7 +75,7 @@ class SignUpIndividual1 extends React.Component {
 						<button
 							className="btn btn-success setNext marginTB-25"
 							onClick={() => browserHistory.push('/signup_individual2')}>
-							    Next
+							Next
 						</button>
 					</div>
 				</div>

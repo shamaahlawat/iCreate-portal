@@ -3,11 +3,7 @@ import './css/signup_entreprenuer.less';
 import { browserHistory } from 'react-router';
 
 class SignUpInvestor1 extends React.Component {
-	constructor() {
-		super();
-	}
-
-
+	
 	render() {
 		return (
 			<div className="col-xs-12 col-md -12 col-sm-12 SignUpEntreprenuer" style={{ background: '#f2f2f2' }}>

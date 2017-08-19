@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/signup_entreprenuer.less';
-import {browserHistory} from 'react-router';
+import { browserHistory } from 'react-router';
 
 class signUpJobSeeker3 extends React.Component {
 	render() {

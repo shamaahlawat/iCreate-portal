@@ -11,7 +11,7 @@ class SignUpAccelerator1 extends React.Component {
 	}
 
 	selectLocation = (place) => {
-		console.log('selectlocation function called');
+		
 	};
 
 

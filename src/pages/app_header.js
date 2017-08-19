@@ -37,47 +37,47 @@ class AppHeader extends Component {
 									className="nav-height custom"
 									onClick={() => browserHistory.push('/home')}>Home</NavItem>
 								{this.props.user_info.is_login === false &&
-								<NavItem
+									<NavItem
 										eventKey={2}
-										className= {"nav-height custom "+ (this.props.current_page === 'signin' ? "active":"")}
+										className={"nav-height custom " + (this.props.current_page === 'signin' ? "active" : "")}
 										onClick={() => browserHistory.push('/signin')}>
 										Sign In
 								</NavItem>}
 								{this.props.user_info.is_login === false &&
-								<NavItem
+									<NavItem
 										eventKey={3}
-										className={"nav-height custom"+ (this.props.current_page === 'signup' ? " active":"")}
+										className={"nav-height custom" + (this.props.current_page === 'signup' ? " active" : "")}
 										onClick={() => browserHistory.push('/signup')}>
 										Sign Up
 								</NavItem>}
 
 								{this.props.user_info.is_login === true &&
-								<NavItem
+									<NavItem
 										eventKey={4}
 										className="nav-height custom"
 										onClick={() => browserHistory.push('/search')}>
 										Search
 								</NavItem>}
 								{this.props.user_info.is_login === true &&
-								<NavItem
+									<NavItem
 										eventKey={5}
 										className="nav-height custom"
 										onClick={() => browserHistory.push('/connection')}>
 										Connection
 								</NavItem>}
 								{this.props.user_info.is_login === true &&
-									<NavDropdown 
-									    eventKey={6} 
-										title={<span><img src="../assets/images/icon_3.png" alt="profile pic" className="img-resposive img-circle set-profile-pic" /> { this.props.user_info.user.first_name }</span>} 
-									    id="dropdown1" 
-										className="nav-height setDropdown">   {/*add first name only (ex- fName = Vivek) otherwise hovering will push all the item left*/}
+									<NavDropdown
+										eventKey={6}
+										title={<span><img src="../assets/images/icon_3.png" alt="profile pic" className="img-resposive img-circle set-profile-pic" /> {this.props.user_info.user.first_name}</span>}
+										id="dropdown1"
+										className="nav-height setDropdown">
 										<NavLink withLi to="/page2/a"><span className="glyphicon glyphicon-user"></span> Profile</NavLink>
 										<NavLink withLi to="/page2/b"><span className="glyphicon glyphicon-cog"></span> Setting</NavLink>
 										<NavLink withLi to="/page2/c"><span className="glyphicon glyphicon-earphone"></span> Contact Us</NavLink>
-										<NavLink 
-										    withLi 
+										<NavLink
+											withLi
 											className="setcursor"
-											onClick={()=>console.log('signout button clicked')}>
+											onClick={() => console.log('signout button clicked')}>
 											<span className="glyphicon glyphicon-log-out"></span> Sign Out
 										</NavLink>
 									</NavDropdown>
