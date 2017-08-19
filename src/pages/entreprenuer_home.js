@@ -18,7 +18,7 @@ class EntreprenuerHome extends Component {
                         <table className="col-md-12 table">
                             <tr>
                                 <th className="col-md-6">Name</th>
-                                <th className="col-md-3">PrivateAccess</th>
+                                <th className="col-md-3">Private Access</th>
                                 <th className="col-md-3" >Apply</th>
                             </tr>
                             <tr>

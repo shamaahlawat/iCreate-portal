@@ -22,14 +22,11 @@ export function setDeviceData(device_data){
 	}
 };
 
-export function pageChanged(page, title) {
+export function pageChanged(page) {
 	return function (dispatch) {
 		dispatch({
 			type: actionTypes.PAGE_CHANGED,
-			payload:{
-				current_page: page,
-				page_title: title
-			}
+			payload:page
 		});
 	}
 };

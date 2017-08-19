@@ -21,7 +21,7 @@ function getHeaders() {
 	return headers;
 };
 
-exports.fetchDataAndProceed = (url, method, data, callback) => {
+function fetchDataAndProceed(url, method, data, callback) {
 	axios({
 		method: method,
 		params: method === 'GET' ? data : {},
@@ -46,22 +46,12 @@ exports.fetchDataAndProceed = (url, method, data, callback) => {
 	});
 };
 
-////////// General APIS /////////////
-exports.getLocationFromIp = (data, callback) => {
-	axios.get('https://freegeoip.net/json/')
-		.then(function (response) {
-			callback(false, response.data);
-		})
-		.catch(function (error) {
-			callback(true, error);
-		});
-};
+//user apis
+exports.userSignIn = (data, callback) => {
+	fetchDataAndProceed('/users/sign_in.json', method_types.post, data, callback)
+}
 
-////////// Sparks Related APIS /////////////
-exports.getBulletinSparks = (data, callback) => {
-	this.fetchDataAndProceed('/locations/bulletin', method_types.post, data, callback);
-};
-
-exports.getMapSparks = (data, callback) => {
-	this.fetchDataAndProceed('/locations/mapView', method_types.get, data, callback);
-};
+exports.userSignUp = (data, callback) => {
+	console.log('userSignUp function called');
+	fetchDataAndProceed('/users.json', method_types.post, data, callback)
+}

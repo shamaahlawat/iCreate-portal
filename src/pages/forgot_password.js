@@ -6,7 +6,7 @@ class ForgotPassword extends Component {
 		return (
 
 			<div className="col-xs-12 col-md -12 col-sm-12 SignUpEntreprenuer" style={{ background: '#f2f2f2' }}>
-				<div className="col-md-8 col-sm-10 col-xs-12 col-sm-offset-1 col-md-offset-2 contentHolder">
+				<div className="col-md-8 col-sm-10 col-xs-12 col-sm-offset-1 col-md-offset-2 contentHolder marginBottom-50">
 					<div className="col-md-12 col-sm-12 col-xs-12 heading" >
 						<p className="setHeader">Forgot Password</p>
 					</div>
