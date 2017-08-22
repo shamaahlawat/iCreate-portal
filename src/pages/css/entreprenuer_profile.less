@@ -290,6 +290,9 @@
         flex-flow: row wrap;
         margin-top: 10px;
     }
+    .contentDisplay {
+        display: none;
+    }
     @media only screen and (min-width: 768px) {
         .companySummary {
             margin-left: 30px;
@@ -297,6 +300,7 @@
     }
     @media only screen and (max-width: 767px) {
         .companySummary {
+            display: none;
             margin-top: 0px;
             margin: 0px;
         }
@@ -319,5 +323,48 @@
     }
     .noMarginBottom {
         margin-bottom: 0px !important;
+    }
+    .feedback {
+        padding-left: 0px !important;
+        padding-top: 30px;
+    }
+    .feedbackSections {
+        border: 1.5px dashed grey;
+        margin-bottom: 15px;
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .feedbackSections:hover .edit {
+        display: block;
+    }
+    .edit {
+        color: blue;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        border: 1px solid blue;
+        display: none;
+    }
+    .noBorder {
+        border: 0px;
+    }
+    .fontSize-10 {
+        font-size: 10px;
+    }
+}
+
+.modal-container {
+    position: relative;
+}
+
+.modal-container .modal,
+.modal-container .modal-backdrop {
+    position: absolute;
+}
+
+.bgColor {
+    .modal-content {
+        background: #f9f9f9 !important;
     }
 }

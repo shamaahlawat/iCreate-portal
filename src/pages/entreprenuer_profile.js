@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
+import { Modal, Button } from "react-bootstrap"
 import './css/entreprenuer_profile.less';
 class EntreprenuerProfile extends Component {
+    constructor() {
+        super();
+        this.open = this.open.bind(this);
+        this.close = this.close.bind(this);
+        this.state = {
+            showModal: false
+        }
+    }
+    close() {
+        this.setState({ showModal: false });
+    }
+    open() {
+        this.setState({ showModal: true });
+    }
     render() {
         return (
-
             <div className="col-md-12 EntreprenuerContent  noMargin noPadding">
                 <div className=" col-md-10 col-md-offset-1 noPadding Main_Entreprenuer">
                     <div className=" col-xs-12 col-md-12 timeline">
@@ -126,49 +140,18 @@ class EntreprenuerProfile extends Component {
                                 </ul>
                             </div>
                             <div className="col-md-12 col-xs-12 companySummary paddingTop-15" >
-                                <h6 className="blueText"> Company Summary   </h6>
-                                <p className="greyText"> Tell the world who you are and what makes your company special.</p>
-                                <p> This is a paragraph, lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
-                                <div className="col-md-12 companyVideo noPadding" >
-                                    <video className="col-md-12" controls height="300px" width="100%">
-                                        <source src="../assets/videos/Channa mere ya.mp4" type="video/mp4" />
-                                        Your browser does not support the video tag.
+                                <div className="col-md-12 col-xs-12 contentDisplay">
+                                    <h6 className="blueText"> Company Summary   </h6>
+                                    <p className="greyText"> Tell the world who you are and what makes your company special.</p>
+                                    <p> This is a paragraph, lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                    <div className="col-md-12 companyVideo noPadding" >
+                                        <video className="col-md-12" controls height="300px" width="100%">
+                                            <source src="../assets/videos/Channa mere ya.mp4" type="video/mp4" />
+                                            Your browser does not support the video tag.
                                       </video>
-                                </div>
-                                <div className="col-md-12 companyOwners paddingTop-15">
-                                    <div className="col-md-12 owners noPadding">
-                                        <div className="col-md-12 add BottomLine">
-                                            <h5 className=" addTeam"><b>Team</b></h5>
-                                            <img src="..\assets\images\plus.png" alt="not found" className="addImage" />
-                                        </div>
-                                        <div className="col-md-4 ownersDetails BottomLine">
-                                            <div className="ownerImage" >
-                                                <img src="..\assets\images\sstar.png" alt="profile image" />
-                                            </div>
-                                            <div className="ownerName">
-                                                <h5>  Shama  </h5>
-                                                <p>   Profile Owner </p>
-                                            </div>
-                                        </div>
-                                        <div className=" col-md-4 ownersDetails BottomLine">
-                                            <div className="ownerImage" >
-                                                <img src="..\assets\images\sstar.png" alt="profile image" />
-                                            </div>
-                                            <div className="ownerName">
-                                                <h5>  Shama  </h5>
-                                                <p>   Profile Owner </p>
-                                            </div>
-                                        </div>
-                                        <div className="col-md-4 ownersDetails BottomLine">
-                                            <div className="ownerImage" >
-                                                <img src="..\assets\images\sstar.png" alt="profile image" />
-                                            </div>
-                                            <div className="ownerName">
-                                                <h5>  Shama  </h5>
-                                                <p>   Profile Owner </p>
-                                            </div>
-                                        </div>
-                                        <div className=" col-md-12 owners noPadding">
+                                    </div>
+                                    <div className="col-md-12 companyOwners paddingTop-15">
+                                        <div className="col-md-12 owners noPadding">
                                             <div className="col-md-12 add BottomLine">
                                                 <h5 className=" addTeam"><b>Team</b></h5>
                                                 <img src="..\assets\images\plus.png" alt="not found" className="addImage" />
@@ -182,7 +165,7 @@ class EntreprenuerProfile extends Component {
                                                     <p>   Profile Owner </p>
                                                 </div>
                                             </div>
-                                            <div className="col-md-4 ownersDetails BottomLine">
+                                            <div className=" col-md-4 ownersDetails BottomLine">
                                                 <div className="ownerImage" >
                                                     <img src="..\assets\images\sstar.png" alt="profile image" />
                                                 </div>
@@ -200,45 +183,111 @@ class EntreprenuerProfile extends Component {
                                                     <p>   Profile Owner </p>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div className="col-md-12 owners noPadding BottomLine">
-                                            <div className="col-md-12 add BottomLine">
-                                                <h5 className=" addTeam marginBottom-0"><b>Previous Investors</b></h5>
-                                                <img src="..\assets\images\plus.png" alt="not found" className="addImage" />
+                                            <div className=" col-md-12 owners noPadding">
+                                                <div className="col-md-12 add BottomLine">
+                                                    <h5 className=" addTeam"><b>Team</b></h5>
+                                                    <img src="..\assets\images\plus.png" alt="not found" className="addImage" />
+                                                </div>
+                                                <div className="col-md-4 ownersDetails BottomLine">
+                                                    <div className="ownerImage" >
+                                                        <img src="..\assets\images\sstar.png" alt="profile image" />
+                                                    </div>
+                                                    <div className="ownerName">
+                                                        <h5>  Shama  </h5>
+                                                        <p>   Profile Owner </p>
+                                                    </div>
+                                                </div>
+                                                <div className="col-md-4 ownersDetails BottomLine">
+                                                    <div className="ownerImage" >
+                                                        <img src="..\assets\images\sstar.png" alt="profile image" />
+                                                    </div>
+                                                    <div className="ownerName">
+                                                        <h5>  Shama  </h5>
+                                                        <p>   Profile Owner </p>
+                                                    </div>
+                                                </div>
+                                                <div className="col-md-4 ownersDetails BottomLine">
+                                                    <div className="ownerImage" >
+                                                        <img src="..\assets\images\sstar.png" alt="profile image" />
+                                                    </div>
+                                                    <div className="ownerName">
+                                                        <h5>  Shama  </h5>
+                                                        <p>   Profile Owner </p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div className="col-md-4 ownersDetails">
-                                                <div className="ownerImage" >
-                                                    <img src="..\assets\images\sstar.png" alt="profile image" />
+                                            <div className="col-md-12 owners noPadding BottomLine">
+                                                <div className="col-md-12 add BottomLine">
+                                                    <h5 className=" addTeam marginBottom-0"><b>Previous Investors</b></h5>
+                                                    <img src="..\assets\images\plus.png" alt="not found" className="addImage" />
                                                 </div>
-                                                <div className="ownerName">
-                                                    <h5>  Shama  </h5>
-                                                    <p>   Profile Owner </p>
+                                                <div className="col-md-4 ownersDetails">
+                                                    <div className="ownerImage" >
+                                                        <img src="..\assets\images\sstar.png" alt="profile image" />
+                                                    </div>
+                                                    <div className="ownerName">
+                                                        <h5>  Shama  </h5>
+                                                        <p>   Profile Owner </p>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div className="col-md-4 ownersDetails ">
-                                                <div className="ownerImage" >
-                                                    <img src="..\assets\images\sstar.png" alt="profile image" />
+                                                <div className="col-md-4 ownersDetails ">
+                                                    <div className="ownerImage" >
+                                                        <img src="..\assets\images\sstar.png" alt="profile image" />
+                                                    </div>
+                                                    <div className="ownerName">
+                                                        <h5>  Shama  </h5>
+                                                        <p>   Profile Owner </p>
+                                                    </div>
                                                 </div>
-                                                <div className="ownerName">
-                                                    <h5>  Shama  </h5>
-                                                    <p>   Profile Owner </p>
-                                                </div>
-                                            </div>
-                                            <div className="col-md-4 ownersDetails ">
-                                                <div className="ownerImage" >
-                                                    <img src="..\assets\images\sstar.png" alt="profile image" />
-                                                </div>
-                                                <div className="ownerName">
-                                                    <h5>  Shama  </h5>
-                                                    <p>   Profile Owner </p>
+                                                <div className="col-md-4 ownersDetails ">
+                                                    <div className="ownerImage" >
+                                                        <img src="..\assets\images\sstar.png" alt="profile image" />
+                                                    </div>
+                                                    <div className="ownerName">
+                                                        <h5>  Shama  </h5>
+                                                        <p>   Profile Owner </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div className="col-md-12 col-sm-12 feedback">
+                                    <div className=" col-md-12 col-xs-12 feedbackSections">
+                                        <div className="edit" data-toggle="modal" data-target=".FirstModal" onClick={this.open}><i className="fa fa-pencil fa-lg"></i></div>
+
+                                        <div className="modal modal-dialog fade firstModal " tabindex="-1" role="dialog" style={{ background: "#f9f9f9" }} >
+                                            <div className="static-modal"  >
+                                                <Modal dialogClassName="bgColor" show={this.state.showModal} onHide={this.close} >
+                                                    <Modal.Header style={{ border: "0px" }}>
+                                                        <Modal.Title>
+                                                            <div>
+                                                                <span style={{ float: "right" }} onClick={this.close} aria-hidden="true">&times;</span>
+
+                                                                <h4 ><b>Management Team</b></h4>
+                                                            </div>
+                                                            <p style={{ fontWeight: 400, fontSize: "12PX" }}>Who are the members of your management team and how will their experience aid in your success? </p>
+                                                        </Modal.Title>
+                                                    </Modal.Header>
+
+                                                    <Modal.Body>
+                                                        <textarea name="message" style={{ width: "100%", height: "200px" }}></textarea>
+                                                        <span style={{ float: "right", fontSize: "12px" }}> 0/450  </span>
+                                                    </Modal.Body>
+
+                                                    <Modal.Footer style={{ border: "0px" }}>
+                                                        <Button className="fontSize-10" onClick={this.close} >Cancel</Button>
+                                                        <Button className="fontSize-10" bsStyle="primary">Save</Button>
+                                                    </Modal.Footer>
+                                                </Modal>
+                                            </div>
+                                        </div>
+                                        <h5><b>Management Team</b> </h5>
+                                        <p style={{ opacity: 0.7, paddingTop: "18px" }}>Who are the members of your management team and how will their experience aid in your success?</p>
+                                    </div>
+                                </div>
+
                             </div>
-
-
                         </div>
                     </div>
 
