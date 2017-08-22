@@ -102,9 +102,6 @@
     .owners b {
         color: #4c5667;
     }
-    i {
-        padding: 10px;
-    }
     .add h5 {
         margin-top: 0px;
         padding-top: 0px;
@@ -338,11 +335,14 @@
     .feedbackSections:hover .edit {
         display: block;
     }
+    .edit i {
+        padding: 6px;
+    }
     .edit {
         color: blue;
         position: absolute;
         right: 5px;
-        top: 5px;
+        top: 12px;
         border: 1px solid blue;
         display: none;
     }
@@ -366,5 +366,16 @@
 .bgColor {
     .modal-content {
         background: #f9f9f9 !important;
+    }
+    .cross {
+        font-weight: normal;
+        line-height: 1;
+        color: #000;
+        text-shadow: 0 1px 0 white;
+        opacity: 0.5;
+    }
+    .cross:hover {
+        color: grey;
+        cursor: pointer;
     }
 }

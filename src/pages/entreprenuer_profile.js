@@ -130,7 +130,7 @@ class EntreprenuerProfile extends Component {
 
                                 <ul className="listBar col-md-6 col-xs-12  listLeft noMarginBottom">
                                     <li className=" col-md-4 col-xs-12 listBorder" ><a href="#/" >Overview </a></li>
-                                    <li className="col-md-4 col-xs-12 listBorder" ><a href="#/" >Pitch Deck </a></li>
+                                    <li className="col-md-4 col-xs-12 listBorder" ><a href="#/" >Pitch  </a></li>
                                 </ul>
 
                                 <ul className="listBar col-md-5 col-xs-12 listRight noPadding noMargin">
@@ -262,14 +262,13 @@ class EntreprenuerProfile extends Component {
                                                     <Modal.Header style={{ border: "0px" }}>
                                                         <Modal.Title>
                                                             <div>
-                                                                <span style={{ float: "right" }} onClick={this.close} aria-hidden="true">&times;</span>
+                                                                <span className="cross" style={{ float: "right", fontSize: "25px" }} onClick={this.close} aria-hidden="true">&times;</span>
 
                                                                 <h4 ><b>Management Team</b></h4>
                                                             </div>
                                                             <p style={{ fontWeight: 400, fontSize: "12PX" }}>Who are the members of your management team and how will their experience aid in your success? </p>
                                                         </Modal.Title>
                                                     </Modal.Header>
-
                                                     <Modal.Body>
                                                         <textarea name="message" style={{ width: "100%", height: "200px" }}></textarea>
                                                         <span style={{ float: "right", fontSize: "12px" }}> 0/450  </span>

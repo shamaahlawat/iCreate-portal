@@ -101,9 +101,6 @@
 .EntreprenuerContent .owners b {
   color: #4c5667;
 }
-.EntreprenuerContent i {
-  padding: 10px;
-}
 .EntreprenuerContent .add h5 {
   margin-top: 0px;
   padding-top: 0px;
@@ -337,11 +334,14 @@
 .EntreprenuerContent .feedbackSections:hover .edit {
   display: block;
 }
+.EntreprenuerContent .edit i {
+  padding: 6px;
+}
 .EntreprenuerContent .edit {
   color: blue;
   position: absolute;
   right: 5px;
-  top: 5px;
+  top: 12px;
   border: 1px solid blue;
   display: none;
 }
@@ -360,4 +360,15 @@
 }
 .bgColor .modal-content {
   background: #f9f9f9 !important;
+}
+.bgColor .cross {
+  font-weight: normal;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 white;
+  opacity: 0.5;
+}
+.bgColor .cross:hover {
+  color: grey;
+  cursor: pointer;
 }
