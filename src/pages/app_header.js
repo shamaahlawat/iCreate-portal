@@ -34,7 +34,7 @@ class AppHeader extends Component {
 							<Nav pullRight>
 								<NavItem
 									eventKey={1}
-									className="nav-height custom"
+									className={"nav-height custom " + (this.props.current_page === 'home' ? " active" : "")}
 									onClick={() => browserHistory.push('/home')}>Home</NavItem>
 								{this.props.user_info.is_login === false &&
 									<NavItem
@@ -54,7 +54,7 @@ class AppHeader extends Component {
 								{this.props.user_info.is_login === true &&
 									<NavItem
 										eventKey={4}
-										className="nav-height custom"
+										className={"nav-height custom " + (this.props.current_page === 'search' ? " active" : "")}
 										onClick={() => browserHistory.push('/search')}>
 										Search
 								</NavItem>}

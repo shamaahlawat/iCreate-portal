@@ -1,8 +1,20 @@
 import React, { Component } from 'react';
 import './css/search.less';
-//import './css/footer.less';
+import * as pageActions from '../redux/actions/page_actions'
+import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import Autocomplete from 'react-google-autocomplete';
 
-class SearchContainer extends Component {
+function mapDispatchToProps(dispatch) {
+	return {
+		actions: bindActionCreators(Object.assign({}, pageActions), dispatch)
+	};
+};
+
+class Search extends Component {
+	componentWillMount() {
+		this.props.actions.pageChanged('search');
+	}
 	render() {
 		return (
 			<div className="SearchContainer container-fluid noLRPadding" >
@@ -32,33 +44,18 @@ class SearchContainer extends Component {
 								</div>
 
 								<p className="keyword-font">LOCATION</p>
-								<input id="location" type="text" className="form-control top-margin-12 bottom-margin-20" name="email">
-								</input>
+								
+								<Autocomplete
+									className="form-control top-margin-12 bottom-margin-20"
+									onPlaceSelected={(place) => this.selectLocation(place)}
+									types={['(regions)']} />
 							</div>
 
 
 							<div className="col-md-12 no-lr-padding">
 								<p className="keyword-font">APPLICATION STATUS</p>
 							</div>
-
-
 						</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 						<div className="col-md-7 col-md-offset-1">
@@ -80,7 +77,7 @@ class SearchContainer extends Component {
 											{/* <!--------------------Left Card--------------------> */}
 											<div className="col-md-8 col-sm-12 col-xs-12 no-lr-padding">
 												<div className="col-md-3 col-sm-3 col-xs-3 no-lr-padding">
-													<img src="../assets/images/icon_3.png" alt="profile pic" className="img-resposive img-rounded set-content-pic" />
+													<img src="../assets/images/blue.jpg" alt="profile pic" className="img-resposive img-rounded set-content-pic" />
 												</div>
 												<div className="col-md-9 col-sm-9 col-xs-9 no-lr-padding">
 													<p className="content-title no-tb-margin">INSEAD Business Angels Alumni France</p>
@@ -99,7 +96,7 @@ class SearchContainer extends Component {
 											{/* <!--------------------Left Card--------------------> */}
 											<div className="col-md-8 col-sm-12 col-xs-12 no-lr-padding">
 												<div className="col-md-3 col-sm-3 col-xs-3 no-lr-padding">
-													<img src="../assets/images/icon_3.png" alt="profile pic" className="img-resposive img-rounded set-content-pic" />
+													<img src="../assets/images/blue.jpg" alt="profile pic" className="img-resposive img-rounded set-content-pic" />
 												</div>
 												<div className="col-md-9 col-sm-9 col-xs-9 no-lr-padding">
 													<p className="content-title no-tb-margin">INSEAD Business Angels Alumni France</p>
@@ -175,11 +172,10 @@ class SearchContainer extends Component {
 					</div>
 				</div>
 
-				{/* <!----------------------------Footer Section--------------------------------> */}
 
 			</div>
 		)
 	}
 }
 
-export default SearchContainer;
+export default connect(null, mapDispatchToProps, null, { withRef: true })(Search);
