@@ -52,16 +52,13 @@ exports.userSignIn = (data, callback) => {
 }
 
 exports.userSignUp = (data, callback) => {
-	console.log('userSignUp function called');
 	fetchDataAndProceed('/users.json', method_types.post, data, callback)
 }
 
 exports.getIndustries = (data, callback) => {
-	console.log('getIndustries function called');
 	fetchDataAndProceed('/industries', method_types.get,data,callback)
 }
 
 exports.getInvestorTypes = (data, callback) => {
-	console.log('getInvestor_types function called');
 	fetchDataAndProceed('/investor_types', method_types.get, data, callback)
 }

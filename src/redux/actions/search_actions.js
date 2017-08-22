@@ -6,8 +6,6 @@ export function fetchIndustriesDetails() {
 	return function (dispatch) {
 		API.getIndustries("", function (err, res) {
 			if (!err) {
-				console.log("no error");
-				console.log(res);
 				dispatch({
 					type: actionTypes.LOAD_INDUSTRIES,
 					payload: res
@@ -27,8 +25,6 @@ export function fetchInvestorTypes() {
 	return function (dispatch) {
 		API.getInvestorTypes("", function (err, res) {
 			if (!err) {
-				console.log("no error");
-				console.log(res);
 				dispatch({
 					type: actionTypes.LOAD_INVESTOR_TYPE,
 					payload: res

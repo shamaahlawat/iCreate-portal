@@ -20,11 +20,53 @@ function mapStateToProps(state) {
 
 
 class Search extends Component {
+	constructor() {
+		super();
+		this.showMoreTypes = this.showMoreTypes.bind(this);
+		this.showMoreIndustries = this.showMoreIndustries.bind(this);
+		this.state = {
+			investorTypesToShow: 2,
+			investorTypesExpanded: false,
+			industriesToShow: 4,
+			industriesExpended: false
+		}
+
+	}
+
 	componentWillMount() {
 		this.props.actions.pageChanged('search');
 		this.props.actions.fetchIndustriesDetails();
 		this.props.actions.fetchInvestorTypes();
 	}
+
+	showMoreTypes() {
+		this.state.investorTypesToShow === 2 ? (
+			this.setState({
+				investorTypesToShow: this.props.search_details.investor_types.length,
+				investorTypesExpanded: true
+			})
+		) : (
+				this.setState({
+					investorTypesToShow: 2,
+					investorTypesExpanded: false
+				})
+			)
+	}
+
+	showMoreIndustries() {
+		this.state.industriesToShow === 4 ? (
+			this.setState({
+				industriesToShow: this.props.search_details.industries.length,
+				industriesExpanded: true
+			})
+		) : (
+				this.setState({
+					industriesToShow: 4,
+					industriesExpanded: false
+				})
+			)
+	}
+
 	render() {
 		return (
 			<div className="SearchContainer container-fluid noLRPadding" >
@@ -70,7 +112,7 @@ class Search extends Component {
 								<p className="keyword-font">INVESTOR TYPE</p>
 								<ul className="noPaddingLeft">
 									{
-										this.props.search_details.investor_types.map((type) => {
+										this.props.search_details.investor_types.slice(0, this.state.investorTypesToShow).map((type) => {
 											return (
 												<li key={type.id} className="setIndustries">
 													<p><input type="checkbox" /><span className="industry">{type.name}</span></p>
@@ -78,12 +120,15 @@ class Search extends Component {
 										})
 									}
 								</ul>
+								<a className="showMore" onClick={this.showMoreTypes}>
+									{this.state.investorTypesExpanded ? (<span>Show less</span>) : (<span>+{this.props.search_details.investor_types.length - 2} more</span>)}
+								</a>
 							</div>
-							<div className="col-md-12 no-lr-padding">
+							<div className="col-md-12 marginTop-15 no-lr-padding">
 								<p className="keyword-font">INDUSTRY</p>
 								<ul className="noPaddingLeft">
 									{
-										this.props.search_details.industries.map((industry) => {
+										this.props.search_details.industries.slice(0, this.state.industriesToShow).map((industry) => {
 											return (
 												<li key={industry.id} className="setIndustries">
 													<p><input type="checkbox" /><span className="industry">{industry.name}</span></p>
@@ -91,7 +136,9 @@ class Search extends Component {
 										})
 									}
 								</ul>
-
+								<a className="showMore" onClick={this.showMoreIndustries}>
+									{this.state.industriesExpanded ? (<span>Show less</span>) : (<span>+{this.props.search_details.industries.length - 4} more</span>)}
+								</a>
 							</div>
 						</div>
 
