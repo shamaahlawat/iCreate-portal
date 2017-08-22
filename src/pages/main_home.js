@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
+import * as pageActions from '../redux/actions/page_actions';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 import './css/main_home.less';
-import './css/app_header.less';
+
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: bindActionCreators(Object.assign({}, pageActions), dispatch)
+    };
+};
 
 class MainHome extends Component {
+    componentWillMount() {
+        this.props.actions.pageChanged('home');
+    }
     render() {
         return (
             <div className="fluid-container mainHome">
@@ -66,7 +77,6 @@ class MainHome extends Component {
                                 <div className=" text">
                                     <h5> Search</h5>
                                     <p>  iCreate </p>
-
                                 </div>
                             </div>
 
@@ -78,7 +88,6 @@ class MainHome extends Component {
                                     <h5> post</h5>
                                     <p> iCreate </p>
                                 </div>
-
                             </div>
 
                             <div className="columnAlign">
@@ -141,18 +150,7 @@ class MainHome extends Component {
                         </div>
                     </div>
                 </div>
-                {/* <div className="col-md-12 section">
-                    <div className="col-xs-12 col-md-6 col-md-offset-3">
-                        <ul className="col-xs-12">
-                            <li  ><img src="../assets/images/sstar.png" alt=" not defined "></img>Basecamp</li>
-                            <li ><img src="../assets/images/sstar.png" alt=" not defined "></img>grubHub</li>
-                            <li ><img src="../assets/images/sstar.png" alt="not defined "></img>Trello</li>
-                            <li ><img src="../assets/images/sstar.png" alt="not defined "></img>Trello</li>
-                            <li ><img src="../assets/images/sstar.png" alt="not defined "></img>Trello</li>
 
-                        </ul>
-                    </div>
-                </div> */}
                 <div className="col-xs-12 col-md-12 section deliverHappiness">
                     <div className="col-xs-12 col-md-10 col-md-offset-1">
                         <div className="col-xs-12 col-md-12 happinesstext">
@@ -169,7 +167,7 @@ class MainHome extends Component {
     }
 }
 
-export default MainHome;
+export default connect(null, mapDispatchToProps, null, { withRef: true })(MainHome);
 
 
 // WEBPACK FOOTER //

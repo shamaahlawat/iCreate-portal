@@ -4,7 +4,7 @@ import MainHome from '../pages/main_home';
 import EntreprenuerHome from '../pages/entreprenuer_home';
 import EntreprenuerProfile from '../pages/entreprenuer_profile'
 
-import SearchContainer from '../pages/search_container';
+import Search from '../pages/search';
 import SignUp from '../pages/signup';
 import SignIn from '../pages/signin';
 import SignUpEntreprenuer1 from '../pages/signup_entreprenuer_1';
@@ -36,20 +36,20 @@ const AppRoutes = {
 		},
 		{
 			path: 'search',
-			component: SearchContainer
+			component: Search
 		},
 		{
 			path: 'entreprenuer_home',
 			component: EntreprenuerHome
 		},
 		{
+			path: 'entreprenuer_profile',
+			component: EntreprenuerProfile
+		},
+		{
 
 			path: 'signup',
 			component: SignUp
-		},
-		{
-			path: 'entreprenuer_profile',
-			component: EntreprenuerProfile
 		},
 		{
 			path: 'signup1',
