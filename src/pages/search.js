@@ -1,20 +1,72 @@
 import React, { Component } from 'react';
 import './css/search.less';
-import * as pageActions from '../redux/actions/page_actions'
-import {bindActionCreators} from 'redux';
+import * as pageActions from '../redux/actions/page_actions';
+import * as searchActions from '../redux/actions/search_actions';
+import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Autocomplete from 'react-google-autocomplete';
 
 function mapDispatchToProps(dispatch) {
 	return {
-		actions: bindActionCreators(Object.assign({}, pageActions), dispatch)
+		actions: bindActionCreators(Object.assign({}, pageActions, searchActions), dispatch)
 	};
 };
 
+function mapStateToProps(state) {
+	return {
+		search_details: state.search_details
+	};
+};
+
+
 class Search extends Component {
+	constructor() {
+		super();
+		this.showMoreTypes = this.showMoreTypes.bind(this);
+		this.showMoreIndustries = this.showMoreIndustries.bind(this);
+		this.state = {
+			investorTypesToShow: 2,
+			investorTypesExpanded: false,
+			industriesToShow: 4,
+			industriesExpended: false
+		}
+
+	}
+
 	componentWillMount() {
 		this.props.actions.pageChanged('search');
+		this.props.actions.fetchIndustriesDetails();
+		this.props.actions.fetchInvestorTypes();
 	}
+
+	showMoreTypes() {
+		this.state.investorTypesToShow === 2 ? (
+			this.setState({
+				investorTypesToShow: this.props.search_details.investor_types.length,
+				investorTypesExpanded: true
+			})
+		) : (
+				this.setState({
+					investorTypesToShow: 2,
+					investorTypesExpanded: false
+				})
+			)
+	}
+
+	showMoreIndustries() {
+		this.state.industriesToShow === 4 ? (
+			this.setState({
+				industriesToShow: this.props.search_details.industries.length,
+				industriesExpanded: true
+			})
+		) : (
+				this.setState({
+					industriesToShow: 4,
+					industriesExpanded: false
+				})
+			)
+	}
+
 	render() {
 		return (
 			<div className="SearchContainer container-fluid noLRPadding" >
@@ -44,7 +96,7 @@ class Search extends Component {
 								</div>
 
 								<p className="keyword-font">LOCATION</p>
-								
+
 								<Autocomplete
 									className="form-control top-margin-12 bottom-margin-20"
 									onPlaceSelected={(place) => this.selectLocation(place)}
@@ -54,6 +106,39 @@ class Search extends Component {
 
 							<div className="col-md-12 no-lr-padding">
 								<p className="keyword-font">APPLICATION STATUS</p>
+
+							</div>
+							<div className="col-md-12 no-lr-padding">
+								<p className="keyword-font">INVESTOR TYPE</p>
+								<ul className="noPaddingLeft">
+									{
+										this.props.search_details.investor_types.slice(0, this.state.investorTypesToShow).map((type) => {
+											return (
+												<li key={type.id} className="setIndustries">
+													<p><input type="checkbox" /><span className="industry">{type.name}</span></p>
+												</li>);
+										})
+									}
+								</ul>
+								<a className="showMore" onClick={this.showMoreTypes}>
+									{this.state.investorTypesExpanded ? (<span>Show less</span>) : (<span>+{this.props.search_details.investor_types.length - 2} more</span>)}
+								</a>
+							</div>
+							<div className="col-md-12 marginTop-15 no-lr-padding">
+								<p className="keyword-font">INDUSTRY</p>
+								<ul className="noPaddingLeft">
+									{
+										this.props.search_details.industries.slice(0, this.state.industriesToShow).map((industry) => {
+											return (
+												<li key={industry.id} className="setIndustries">
+													<p><input type="checkbox" /><span className="industry">{industry.name}</span></p>
+												</li>);
+										})
+									}
+								</ul>
+								<a className="showMore" onClick={this.showMoreIndustries}>
+									{this.state.industriesExpanded ? (<span>Show less</span>) : (<span>+{this.props.search_details.industries.length - 4} more</span>)}
+								</a>
 							</div>
 						</div>
 
@@ -178,4 +263,4 @@ class Search extends Component {
 	}
 }
 
-export default connect(null, mapDispatchToProps, null, { withRef: true })(Search);
+export default connect(mapStateToProps, mapDispatchToProps, null, { withRef: true })(Search);
