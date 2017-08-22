@@ -41,6 +41,10 @@ export const initialStates = {
 		is_login:false
 	},
 
+	search_details:{
+		industries:[],
+		investor_types:[]
+	},
 
 	count_details: {
 		current_count: 0
